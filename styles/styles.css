@@ -234,3 +234,192 @@ html {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+html {
+  font-size: 125%;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  color: #424B54;
+  margin: 0;
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #424B54;
+  margin: 0;
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #424B54;
+  margin: 0;
+}
+
+a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #424B54;
+}
+
+header {
+  background-color: #F7EDF0;
+  text-align: center;
+  padding: 40px 0;
+}
+
+h1 {
+  margin: 0 auto;
+  font-size: 2.7rem;
+}
+
+h1 span {
+  margin: 0 auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 8rem;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  display: block;
+  word-wrap: break-word;
+  color: #C3DFE0;
+  text-shadow: 7px 5px 0 #F4AFAB, 14px 9px 0 #F4CBC6;
+}
+
+h1 span:hover {
+  color: #424B54;
+  text-shadow: -7px 5px 0 #F4AFAB, -14px 9px 0 #F4CBC6;
+}
+
+.questionMark {
+  width: 20%;
+  margin: 10px auto;
+  font-size: 6rem;
+  font-weight: 700;
+  letter-spacing: -8px;
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+  color: #C3DFE0;
+  text-shadow: 4px 3px 0 #424B54;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  -webkit-animation: rotation 6s infinite linear;
+          animation: rotation 6s infinite linear;
+}
+
+.questionMark:hover {
+  text-shadow: -4px -3px 0 #424B54;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+.mainButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px auto;
+}
+
+.mainButtons button {
+  border: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+  margin: 30px 0;
+}
+
+.mainButtons .takeQuiz {
+  cursor: pointer;
+  margin: 0 auto;
+  font-size: 2rem;
+  color: #F7EDF0;
+  font-weight: 600;
+  width: 50%;
+  background-color: #424B54;
+  padding: 10px 5px;
+  border-radius: 12px;
+}
+
+.mainButtons .takeToInfo {
+  cursor: pointer;
+  margin: 30px auto 0px auto;
+  font-size: 1.2rem;
+  color: #F7EDF0;
+  font-weight: 600;
+  width: 45%;
+  background-color: #F4AFAB;
+  padding: 12px 5px;
+  border-radius: 12px;
+}
+
+main {
+  background-color: #C3DFE0;
+}
+
+.animeInfo {
+  padding: 80px 0;
+}
+
+.animeInfo p {
+  letter-spacing: 0.7px;
+  line-height: 30px;
+  margin-top: 20px;
+}
+
+.animeInfo button {
+  border: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+.animeInfo .takeQuiz {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #C3DFE0;
+  font-weight: 400;
+  width: 50%;
+  background-color: #424B54;
+  padding: 10px 5px;
+  border-radius: 12px;
+}

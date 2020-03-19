@@ -1,0 +1,41 @@
+html {
+    font-size: 125%;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+h1, 
+h2 {
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    color: $primaryTextColor;
+    margin: 0;
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $primaryTextColor;
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: $primaryTextColor;
+    margin: 0;
+}
+
+a {
+    font-weight: 600;
+    text-decoration: none;
+    color: $primaryTextColor;
+}
