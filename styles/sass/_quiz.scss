@@ -1,0 +1,25 @@
+.quiz {
+    background-color: $tertiaryColor;
+    padding: 80px 0;
+}
+
+.firstQuestionContainer,
+.thirdQuestionContainer,
+.fifthQuestionContainer {
+    display: flex;
+}
+
+.secondQuestionContainer,
+.fourthQuestionContainer {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.questionImage img {
+    width: 100%;
+    display: block;
+}
+
+.questionContent {
+    padding: 0 30px;
+}

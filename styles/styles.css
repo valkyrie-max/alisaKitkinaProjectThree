@@ -258,10 +258,9 @@ h2 {
 h3 {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
-  text-transform: uppercase;
   color: #424B54;
   margin: 0;
-  font-size: 3.5rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -395,14 +394,24 @@ main {
   background-color: #C3DFE0;
 }
 
+.quiz h2 {
+  font-size: 3.5rem;
+}
+
+.quiz h3 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  font-style: italic;
+}
+
 .animeInfo {
   padding: 80px 0;
 }
 
 .animeInfo p {
+  margin-top: 20px;
   letter-spacing: 0.7px;
   line-height: 30px;
-  margin-top: 20px;
 }
 
 .animeInfo button {
@@ -422,4 +431,37 @@ main {
   background-color: #424B54;
   padding: 10px 5px;
   border-radius: 12px;
+}
+
+.quiz {
+  background-color: #F4CBC6;
+  padding: 80px 0;
+}
+
+.firstQuestionContainer,
+.thirdQuestionContainer,
+.fifthQuestionContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.secondQuestionContainer,
+.fourthQuestionContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.questionImage img {
+  width: 100%;
+  display: block;
+}
+
+.questionContent {
+  padding: 0 30px;
 }
