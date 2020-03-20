@@ -1,19 +1,23 @@
 .quiz {
     background-color: $tertiaryColor;
     padding: 80px 0;
+        h2 {
+            font-size: 2.5rem;
+        }
 }
 
-.firstQuestionContainer,
-.thirdQuestionContainer,
-.fifthQuestionContainer {
-    display: flex;
+.questionContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    column-gap: 50px;
+    align-items: center;
+    justify-items: stretch;
+    margin-bottom: 50px;
 }
 
-.secondQuestionContainer,
-.fourthQuestionContainer {
-    display: flex;
-    flex-direction: row-reverse;
-}
+.secondQuestionContainer .questionImage, .fourthQuestionContainer .questionImage {
+        order: 2;
+    }
 
 .questionImage img {
     width: 100%;
@@ -21,5 +25,5 @@
 }
 
 .questionContent {
-    padding: 0 30px;
+    text-align: left;
 }

@@ -251,8 +251,15 @@ h2 {
   text-transform: uppercase;
   color: #424B54;
   margin: 0;
-  font-size: 5rem;
   font-weight: 400;
+}
+
+h1 {
+  font-size: 2.7rem;
+}
+
+h2 {
+  font-size: 5rem;
 }
 
 h3 {
@@ -260,8 +267,9 @@ h3 {
   font-weight: 400;
   color: #424B54;
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
+  margin-top: 10px;
 }
 
 p {
@@ -394,18 +402,13 @@ main {
   background-color: #C3DFE0;
 }
 
-.quiz h2 {
-  font-size: 3.5rem;
-}
-
-.quiz h3 {
-  font-size: 1.5rem;
-  margin-top: 30px;
-  font-style: italic;
-}
-
 .animeInfo {
   padding: 80px 0;
+}
+
+.animeInfo h3 {
+  text-transform: uppercase;
+  font-size: 2.4rem;
 }
 
 .animeInfo p {
@@ -438,23 +441,28 @@ main {
   padding: 80px 0;
 }
 
-.firstQuestionContainer,
-.thirdQuestionContainer,
-.fifthQuestionContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.quiz h2 {
+  font-size: 2.5rem;
 }
 
-.secondQuestionContainer,
-.fourthQuestionContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+.questionContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(370px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: stretch;
+  margin-bottom: 50px;
+}
+
+.secondQuestionContainer .questionImage, .fourthQuestionContainer .questionImage {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 
 .questionImage img {
@@ -463,5 +471,13 @@ main {
 }
 
 .questionContent {
-  padding: 0 30px;
+  text-align: left;
+}
+
+@media (max-width: 987px) {
+  .secondQuestionContainer .questionImage, .fourthQuestionContainer .questionImage {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
 }
