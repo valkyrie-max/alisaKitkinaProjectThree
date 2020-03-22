@@ -6,7 +6,7 @@
 //          • result recommendations include:
 //                  – JJBA;
 //                  – AoT;
-//                  – BNHA;
+//                  – MHA;
 //                  – Gintama;
 //                  – Evangelion;
 //          • give each anime a value in order to calculate the score in the end; 

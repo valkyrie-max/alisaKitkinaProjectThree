@@ -30,9 +30,11 @@ h3 {
     font-weight: 400;
     color: $primaryTextColor;
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     margin-top: 10px;
+    letter-spacing: 0.7px;
+    line-height: 30px;
 }
 
 p {
@@ -41,8 +43,31 @@ p {
     margin: 0;
 }
 
+label {
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.7px;
+    line-height: 30px;
+    color: $headerColor;
+    transition: all 0.8s ease;
+}
+
 a {
     font-weight: 600;
     text-decoration: none;
     color: $primaryTextColor;
+}
+
+button {
+    cursor: pointer;
+    color: $headerColor;
+    font-weight: 600;
+    border: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    margin: 30px 0;
+    border-radius: 12px;
 }

@@ -24,6 +24,58 @@
     display: block;
 }
 
-.questionContent {
-    text-align: left;
+.questionButton button {
+    width: 25%;
+    color: $secondaryColor;
+    font-size: 1rem;
+    padding: 15px 10px;
+    background-color: $headerColor;
+        i {
+            color: $secondaryTextColor;
+            font-size: 1rem;
+        }
+}
+
+.questionOptions {
+    margin-top: 20px;
+}
+
+.optionContainer {
+    margin-top: 5px;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+input[type="radio"] + label::before {
+    font-family: FontAwesome;
+    display: inline-block;
+    font-weight: 900;
+    font-size: 1rem;
+    margin-right: 10px;
+    content: "\f0c8";
+    color: $headerColor;
+    transition: all 0.5s ease;
+}
+
+
+form:hover input[type="radio"]:hover + label::before,
+label:hover {
+    color: $primaryTextColor;
+}
+
+input[type="radio"]:checked + label::before,
+input[type="radio"]:checked + label {
+    color: $primaryTextColor;
+}
+
+input[type="radio"]:checked + label::before {
+    content: "\f14a";
+}
+
+input[type="radio"]:checked + label {
+    background-color: $headerColor;
+    padding: 5px 3px;
+    box-shadow: 5px 5px 0 $secondaryTextColor, 10px 10px 0 $secondaryColor;
 }

@@ -9,7 +9,9 @@
 
     <!-- google fonts link -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400|Source+Sans+Pro:400,600,700&display=swap" rel="stylesheet">
+
     <!-- font awesome link -->
+    <script src="https://kit.fontawesome.com/82d522d35e.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
@@ -31,7 +33,7 @@
     <main>
         <!-- animeInfo starts -->
         <div class="wrapper">
-            <section class="animeInfo">
+            <section class="animeInfo" id="animeInfo">
                 <h2>“Anime”?</h2>
                 <h3>What the heck is that?!</h3>
                 <p>Glad you asked! According to <a href="https://en.wikipedia.org/wiki/Anime">the website that shall remain unnamed</a>, anime is animation originating from or associated with Japan. There are heated debates about whether anime is for kids or not. However, anime has a large age demographic that aims not only at children but adults as well. Therefore, on one hand, it can allow itself to discover dark topics such as death, war, bullying, jealousy and etc. on a deeper level. On the other hand, anime also can be used as a colorful visual medium, since there are shows that have children as their main intended audience. Hence, it can be used to teach kids to understand different types of people or the importance of hard work and dedication.</p>
@@ -42,10 +44,10 @@
         <!-- animeInfo ends -->
 
         <!-- quiz starts -->
-        <section class="quiz">
+        <section class="quiz" id="quiz">
             <div class="wrapper">
                 <!-- first question -->
-                <div class="firstQuestionContainer questionContainer">
+                <form id="question1" class="firstQuestionContainer questionContainer">
                     <div class="questionImage">
                         <img src=" https://picsum.photos/500" alt="">
                     </div>
@@ -76,11 +78,14 @@
                                 <label for="jjba1">Destiny/Fate Bond</label>
                             </div>
                         </div>
+                        <div class="questionButton">
+                            <button>Next Q! <i aria-hidden="true" class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                </div>
+                </form>
 
                 <!-- second question -->
-                <div class="secondQuestionContainer questionContainer">
+                <form id="question2" class="secondQuestionContainer questionContainer">
                     <div class="questionImage">
                         <img src=" https://picsum.photos/500"
                             alt="">
@@ -105,10 +110,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
 
                 <!-- third question -->
-                <div class="thirdQuestionContainer questionContainer">
+                <form id="question3" class="thirdQuestionContainer questionContainer">
                     <div class="questionImage">
                         <img src=" https://picsum.photos/500"
                             alt="">
@@ -141,10 +146,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
 
                 <!-- fourth question -->
-                <div class="fourthQuestionContainer questionContainer">
+                <form id="question4" class="fourthQuestionContainer questionContainer">
                     <div class="questionImage">
                         <img src=" https://picsum.photos/500"
                             alt="">
@@ -177,10 +182,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
 
                 <!-- fifth question -->
-                <div class="fifthQuestionContainer questionContainer">
+                <form id="question5" class="fifthQuestionContainer questionContainer">
                     <div class="questionImage">
                         <img src=" https://picsum.photos/500"
                             alt="">
@@ -213,14 +218,17 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
             
         </section>
         <!-- quiz ends -->
 
-        <!-- results -->
-
+        <!-- result start -->
+        <section class="result">
+            <!-- result will be dynamically added by using JQuery -->
+        </section>
+        <!-- result end -->
 
     </main>
     <!-- MAIN ENDS -->
