@@ -298,7 +298,8 @@ a {
   color: #424B54;
 }
 
-button {
+button,
+.button {
   cursor: pointer;
   color: #F7EDF0;
   font-weight: 600;
@@ -314,6 +315,7 @@ header {
   background-color: #F7EDF0;
   text-align: center;
   padding: 40px 0;
+  min-height: 100vh;
 }
 
 h1 {
@@ -414,6 +416,7 @@ main {
 
 .animeInfo {
   padding: 80px 0;
+  min-height: 100vh;
 }
 
 .animeInfo h3 {
@@ -452,90 +455,11 @@ main {
 }
 
 .quiz h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
 }
 
-.questionContainer {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(370px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-  -webkit-column-gap: 50px;
-          column-gap: 50px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: stretch;
-  margin-bottom: 50px;
-}
-
-.secondQuestionContainer .questionImage, .fourthQuestionContainer .questionImage {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-}
-
-.questionImage img {
-  width: 100%;
-  display: block;
-}
-
-.questionButton button {
-  width: 25%;
-  color: #F4AFAB;
-  font-size: 1rem;
-  padding: 15px 10px;
-  background-color: #F7EDF0;
-}
-
-.questionButton button i {
-  color: #C3DFE0;
-  font-size: 1rem;
-}
-
-.questionOptions {
-  margin-top: 20px;
-}
-
-.optionContainer {
-  margin-top: 5px;
-}
-
-input[type="radio"] {
-  display: none;
-}
-
-input[type="radio"] + label::before {
-  font-family: FontAwesome;
-  display: inline-block;
-  font-weight: 900;
-  font-size: 1rem;
-  margin-right: 10px;
-  content: "\f0c8";
-  color: #F7EDF0;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-form:hover input[type="radio"]:hover + label::before,
-label:hover {
-  color: #424B54;
-}
-
-input[type="radio"]:checked + label::before,
-input[type="radio"]:checked + label {
-  color: #424B54;
-}
-
-input[type="radio"]:checked + label::before {
-  content: "\f14a";
-}
-
-input[type="radio"]:checked + label {
-  background-color: #F7EDF0;
-  padding: 5px 3px;
-  -webkit-box-shadow: 5px 5px 0 #C3DFE0, 10px 10px 0 #F4AFAB;
-          box-shadow: 5px 5px 0 #C3DFE0, 10px 10px 0 #F4AFAB;
+.takeToResultBtn {
+  color: black;
 }
 
 @media (max-width: 987px) {

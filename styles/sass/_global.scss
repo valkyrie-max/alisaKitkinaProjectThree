@@ -60,7 +60,8 @@ a {
     color: $primaryTextColor;
 }
 
-button {
+button, 
+.button {
     cursor: pointer;
     color: $headerColor;
     font-weight: 600;
