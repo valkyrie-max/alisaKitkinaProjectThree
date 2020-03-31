@@ -16,6 +16,11 @@ const animeResult = {
     eva: `Evangelion`
 }
 
+// an object that stores a safePickAnime 
+const safePickAnime = {
+    hai: `Haikyuu`
+}
+
 // user warning element
 const userWarning = `<div class="alertUser"><p>Pick an answer please!<p></div>`;
 
@@ -112,6 +117,11 @@ $(function() {
             $(`#resultSection`).append(userResult);
             // remove the warning if forms are submitted properly
             $(this).find(`.alertUser`).remove();
+
+            // if all scores are equal to 1, insert a safePickAnime 
+            if (userChoiceArray[0, 1, 2, 3, 4].animeScore == 1) {
+                prompt(safePickAnime.hai)
+            }
         } else {
             // if there is not enough input from the user
             $(this).append(userWarning);
