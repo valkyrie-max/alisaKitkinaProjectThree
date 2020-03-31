@@ -79,15 +79,42 @@ $(function() {
     $(`#seeUserResults`).on(`click`, function() {
         // re-declaring userChoice variable because of the scope
         const userChoice = $(`form`).find(`input:radio:checked`);
+        let userResultName = Object.keys(userChoice);
+
+        // testing
+        const userResult = `<div class="userQuizResult">Looks like you got ${userResultName}!<p></div>`;
 
         // statement to calculate the result 
         if (userChoice.length === 5) {
-            const userChoiceArray = Object.keys(animeResultValues).map(i => animeResultValues[i]);
-            userChoiceArray.sort();
-            console.log(userChoiceArray)
+            console.log(this);
+
+            // function to numerically sort an array
+            function sortNumber(a, b) {
+                return b.animeScore - a.animeScore;
+            }
+
+            // convert userChoice object into array 
+            const userChoicePropertyKey = Object.keys(animeResultValues);
+            const userChoiceArray = userChoicePropertyKey.map(function(propertyKey) {
+                return { 
+                    valueName: propertyKey,
+                    animeScore: animeResultValues[propertyKey]
+                };
+            });
+
+            // sorting the created array
+            userChoiceArray.sort(sortNumber); 
+
+            console.log(userChoiceArray);
+
+            // prevent user from multiple submissions
+            $(`#quiz`).find(`.takeToResultBtn`).removeAttr('href');
+            $(`#resultSection`).append(userResult);
+            // remove the warning if forms are submitted properly
+            $(this).find(`.alertUser`).remove();
         } else {
             // if there is not enough input from the user
-            console.log(userChoice.length);
+            $(this).append(userWarning);
         }
     })
 });
