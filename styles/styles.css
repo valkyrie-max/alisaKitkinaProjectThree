@@ -458,8 +458,88 @@ main {
   font-size: 1.8rem;
 }
 
+.questionContainer {
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: stretch;
+  min-height: 85vh;
+}
+
+.secondQuestionContainer .questionImage,
+.fourthQuestionContainer .questionImage {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.questionImage img {
+  width: 100%;
+  display: block;
+}
+
+.nextQuestionBtn {
+  border: none;
+}
+
+.resultButton .button {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.questionOptions {
+  margin-top: 20px;
+}
+
+.optionContainer {
+  margin-top: 5px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label::before {
+  font-family: FontAwesome;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 1rem;
+  margin-right: 10px;
+  content: "\f0c8";
+  color: #F7EDF0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+input[type="radio"]:hover + label::before,
+label:hover {
+  color: #6f7e8d;
+}
+
+input[type="radio"]:checked + label::before,
+input[type="radio"]:checked + label {
+  color: #424B54;
+  content: "\f14a";
+}
+
+input[type="radio"]:checked + label {
+  background-color: #F7EDF0;
+  color: #424B54;
+  padding: 5px 3px;
+  -webkit-box-shadow: 5px 5px 0 #C3DFE0, 10px 10px 0 #F4AFAB;
+          box-shadow: 5px 5px 0 #C3DFE0, 10px 10px 0 #F4AFAB;
+}
+
 .takeToResultBtn {
   color: black;
+}
+
+.secondaryImageEffect {
+  display: none;
 }
 
 @media (max-width: 987px) {

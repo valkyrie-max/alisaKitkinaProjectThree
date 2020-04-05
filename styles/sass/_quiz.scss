@@ -6,87 +6,90 @@
         }
 }
 
-// .questionContainer {
-//     display: grid;
-//     grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-//     column-gap: 50px;
-//     align-items: center;
-//     justify-items: stretch;
-//     min-height: 85vh;
-// }
+.questionContainer {
+    display: grid;
+    column-gap: 50px;
+    align-items: center;
+    justify-items: stretch;
+    min-height: 85vh;
+}
 
-// .secondQuestionContainer .questionImage, 
-// .fourthQuestionContainer .questionImage {
-//         order: 2;
-//     }
+.secondQuestionContainer .questionImage, 
+.fourthQuestionContainer .questionImage {
+        order: 2;
+    }
 
-// .questionImage img {
-//     width: 100%;
-//     display: block;
-// }
+.questionImage img {
+    width: 100%;
+    display: block;
+}
 
-// .questionButton .button,
-// .resultButton .button {
-//     width: 25%;
-//     display: inline-block;
-//     text-align: center;
-//     color: $secondaryColor;
-//     font-size: 1rem;
-//     padding: 15px 10px;
-//     background-color: $headerColor;
-//         i {
-//             color: $secondaryTextColor;
-//             font-size: 1rem;
-//         }
-// }
+.nextQuestionBtn {
+    border: none;
+    // width: 25%;
+    // display: inline-block;
+    // text-align: center;
+    // color: $secondaryColor;
+    // font-size: 1rem;
+    // padding: 15px 10px;
+    // background-color: $headerColor;
+    //     i {
+    //         color: $secondaryTextColor;
+    //         font-size: 1rem;
+    //     }
+}
 
-// .resultButton .button {
-//     width: 100%;
-//     margin: 20px 0;
-// }
+.resultButton .button {
+    width: 100%;
+    margin: 20px 0;
+}
 
-// .questionOptions {
-//     margin-top: 20px;
-// }
+.questionOptions {
+    margin-top: 20px;
+}
 
-// .optionContainer {
-//     margin-top: 5px;
-// }
+.optionContainer {
+    margin-top: 5px;
+}
 
-// input[type="radio"]{
-//     display: none;
-// }
+input[type="radio"]{
+    display: none;
+}
 
-// input[type="radio"] + label::before {
-//     font-family: FontAwesome;
-//     display: inline-block;
-//     font-weight: 900;
-//     font-size: 1rem;
-//     margin-right: 10px;
-//     content: "\f0c8";
-//     color: $headerColor;
-//     transition: all 0.5s ease;
-// }
+input[type="radio"] + label::before {
+    font-family: FontAwesome;
+    display: inline-block;
+    font-weight: 900;
+    font-size: 1rem;
+    margin-right: 10px;
+    content: "\f0c8";
+    color: $headerColor;
+    transition: all 0.5s ease;
+}
 
 
-// input[type="radio"]:hover + label::before,
-// label:hover {
-//     color: lighten($primaryTextColor, 20);
-// }
+input[type="radio"]:hover + label::before,
+label:hover {
+    color: lighten($primaryTextColor, 20);
+}
 
-// input[type="radio"]:checked + label::before,
-// input[type="radio"]:checked + label {
-//     color: $primaryTextColor;
-//     content: "\f14a";
-// }
+input[type="radio"]:checked + label::before,
+input[type="radio"]:checked + label {
+    color: $primaryTextColor;
+    content: "\f14a";
+}
 
-// input[type="radio"]:checked + label {
-//     background-color: $headerColor;
-//     color: $primaryTextColor;
-//     padding: 5px 3px;
-//     box-shadow: 5px 5px 0 $secondaryTextColor, 10px 10px 0 $secondaryColor;
-// }
+input[type="radio"]:checked + label {
+    background-color: $headerColor;
+    color: $primaryTextColor;
+    padding: 5px 3px;
+    box-shadow: 5px 5px 0 $secondaryTextColor, 10px 10px 0 $secondaryColor;
+}
 
 .takeToResultBtn {
     color: black;
+}
+
+.secondaryImageEffect {
+    display: none;
 }
