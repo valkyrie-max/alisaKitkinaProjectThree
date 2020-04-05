@@ -44,7 +44,7 @@ const animeResult = {
 // an object that stores a safePickAnime 
 const safePickAnime = {
     name: `<h3>Haikyu!!</h3>`,
-    synopsis: `<p>Earth, 2015, human civilization is devastated by global climate disaster known as Second Impact, which happened fifteen years ago. To general public, it is presented as melting Antarctic ice, when in reality, it is a coverup for giant monsters attacking earth. Those monsters are able to nullify any conventional weapon created by humans with Force Fields. However, the hope isn't lost yet. Some children born after the Second Impact can pilot giant robots that are able to break those Force Fields and kill the invading monsters. But why these giant robots are able to break Force Fields while other weapons can't? And why are those monsters attacking in the first place?</p>`,
+    synopsis: `<p>Inspired after watching a volleyball ace nicknamed "Little Giant", small Shouyou Hinata relaunches the volleyball club at his middle school. His new team even makes it to a tournament! Unfortunately for them, their first match turns out to be their last when they are viciously crushed by one of the strongest teams. No, not even a team – they get destroyed by the "King of the Court," Tobio Kageyama. Hinata promises to surpass the King no matter what. After middle school is over, Hinata joins Karasuno High School's volleyball team, and he finds that his foe is now his teammate?! Haikyuu!! is a sports comedy with a slice of life that follows two  determined rivaling athletes, their teammates and opponents as Karasuno Volleyball Club tries to make their high school team the best in Japan.</p>`,
     image: `<img src="assets/haiInitialImg.png" alt="" />`,
     linkToWatch: `<a class="watchHereLink" href="https://www.crunchyroll.com/haikyu">Watch it here!</a>`
 }
@@ -143,6 +143,13 @@ $(function() {
             // access the winning title 
             const resultChoice = animeResult[winningTitle]; 
 
+            // append the winnning result and dynamically add it to the DOM
+            $(`.result`).html(resultChoice.name);
+            $(`.result`).append(resultChoice.synopsis);
+            $(`.result`).append(resultChoice.image);
+            $(`.result`).append(resultChoice.linkToWatch);
+
+
             // if all scores are equal to 1, insert a safePickAnime 
             if (userChoiceArray[0, 1, 2, 3, 4].animeScore == 1) {
                 $(`.result`).html(safePickAnime.name);
@@ -150,12 +157,6 @@ $(function() {
                 $(`.result`).append(safePickAnime.image);
                 $(`.result`).append(safePickAnime.linkToWatch);
             } 
-
-            // append the winnning result and dynamically add it to the DOM
-            $(`.result`).html(resultChoice.name);
-            $(`.result`).append(resultChoice.synopsis);
-            $(`.result`).append(resultChoice.image);
-            $(`.result`).append(resultChoice.linkToWatch);
 
             // prevent user from multiple submissions
             $(`#quiz`).find(`.takeToResultBtn`).removeAttr('data-href');
