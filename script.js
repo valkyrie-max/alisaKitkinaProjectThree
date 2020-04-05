@@ -9,16 +9,44 @@ let animeResultValues = {
 
 // an object that stores potential results
 const animeResult = {
-    jjba: `JoJo's Bizarre Adventure`, 
-    aot: `Attack on Titan`,
-    mha: `My Hero Academia`,
-    gin: `Gintama`,
-    eva: `Evangelion`
+    jjba: {
+        name: `<h3>JoJo's Bizarre Adventure</h3>`,
+        synopsis: `<p>JoJo's Bizarre Adventure is the story about the Joestar family and its multi-generational conflict with Dio Brando. Each part in the anime follows the life of another member of the Joestar family, tracing their adventures through the generations. It starts with Jonathan Joestar who initiates a rivalry with his adopted brother, Dio Brando. Where will this bizarre adventure take them?</p>`,
+        image: `<img src="assets/jjbaInitialImg.png" alt="" />`,
+        linkToWatch: `<a class="watchHereLink" href="https://www.crunchyroll.com/jojos-bizarre-adventure">Watch it here!</a>`
+    },
+    aot: {
+        name: `<h3>Attack on Titan</h3>`,
+        synopsis: `<p>Attack on Titan is set in a dark-fantasy world where the humanity lives inside enormous Walls, which separate the area onto three main regions. Those Walls protect humans from Titans, gigantic humanoid creatures who devour humans presumably without any justifications. Main characters, Eren Jaeger, Mikasa Ackerman and Armin Arlert, witness something horrific at a young age and promise to take their revenge on those gigantic creatures.</p>`,
+        image: `<img src="assets/aotInitialImg.png" alt="" />`,
+        linkToWatch: `<a class="watchHereLink" href="https://www.crunchyroll.com/attack-on-titan">Watch it here!</a>`
+    },
+    mha: {
+        name: `<h3>My Hero Academia</h3>`,
+        synopsis: `<p>Human kind develop special powers known as "quirks". In a present world occupied by people with quirks, Izuku Midoriya, who absolutely adores superhumans, happend to have no such power. Nontheless, the little boy is determined to become a hero and enroll in one of the most prestigious hero academy. After, one might say, lucky incident, Izuku get accepted into the academy where he starts to realize what it means to be a hero.</p>`,
+        image: `<img src="assets/mhaInitialImg.png" alt="" />`,
+        linkToWatch: `<a class="watchHereLink" href="https://www.crunchyroll.com/my-hero-academia">Watch it here!</a>`
+    },
+    gin: {
+        name: `<h3>Gintama</h3>`,
+        synopsis: `<p>It's mid-nineteenth century and the US fleet should have invaded Japan leading to modernization of the sociopolitical systems and the fall of Shogunate... but that didn't happened. Instead, Japan was invaded by aliens coming down from different parts of universe! The Shogunate became a puppet in the hands of invaders' army, which lead to all samurais being disarmed and reduced to temp workers. Gintama tells us a story about Gintoki, one of the samurais, without any respect for new rules, and he is ready to take any job to survive in these difficult times.</p>`,
+        image: `<img src="assets/ginInitialImg.png" alt="" />`,
+        linkToWatch: `<a class="watchHereLink" href="https://www.crunchyroll.com/gintama">Watch it here!</a>`
+    },
+    eva: {
+        name: `<h3>Neon Genesis Evangelion</h3>`,
+        synopsis: `<p>Earth, 2015, human civilization is devastated by global climate disaster known as Second Impact, which happened fifteen years ago. To general public, it is presented as melting Antarctic ice, when in reality, it is a coverup for giant monsters attacking earth. Those monsters are able to nullify any conventional weapon created by humans with Force Fields. However, the hope isn't lost yet. Some children born after the Second Impact can pilot giant robots that are able to break those Force Fields and kill the invading monsters. But why these giant robots are able to break Force Fields while other weapons can't? And why are those monsters attacking in the first place?</p>`,
+        image: `<img src="assets/evaInitialImg.png" alt="" />`,
+        linkToWatch: `<a class="watchHereLink" href="https://www.netflix.com/ca/title/81033445">Watch it here!</a>`
+    },
 }
 
 // an object that stores a safePickAnime 
 const safePickAnime = {
-    hai: `Haikyuu`
+    name: `<h3>Haikyu!!</h3>`,
+    synopsis: `<p>Earth, 2015, human civilization is devastated by global climate disaster known as Second Impact, which happened fifteen years ago. To general public, it is presented as melting Antarctic ice, when in reality, it is a coverup for giant monsters attacking earth. Those monsters are able to nullify any conventional weapon created by humans with Force Fields. However, the hope isn't lost yet. Some children born after the Second Impact can pilot giant robots that are able to break those Force Fields and kill the invading monsters. But why these giant robots are able to break Force Fields while other weapons can't? And why are those monsters attacking in the first place?</p>`,
+    image: `<img src="assets/haiInitialImg.png" alt="" />`,
+    linkToWatch: `<a class="watchHereLink" href="https://www.crunchyroll.com/haikyu">Watch it here!</a>`
 }
 
 // user warning element
@@ -86,45 +114,60 @@ $(function() {
         const userChoice = $(`form`).find(`input:radio:checked`);
         let userResultName = Object.keys(userChoice);
 
-        // testing
-        const userResult = `<div class="userQuizResult">Looks like you got ${userResultName}!<p></div>`;
 
         // statement to calculate the result 
         if (userChoice.length === 5) {
             console.log(this);
 
-            // function to numerically sort an array
-            function sortNumber(a, b) {
-                return b.animeScore - a.animeScore;
-            }
-
-            // convert userChoice object into array 
+            // convert received userChoice object into array 
             const userChoicePropertyKey = Object.keys(animeResultValues);
-            const userChoiceArray = userChoicePropertyKey.map(function(propertyKey) {
-                return { 
+            const userChoiceArray = userChoicePropertyKey.map(function (propertyKey) {
+                return {
                     valueName: propertyKey,
                     animeScore: animeResultValues[propertyKey]
                 };
             });
 
-            // sorting the created array
+            // function to numerically sort an array
+            function sortNumber(a, b) {
+                return b.animeScore - a.animeScore;
+            }
             userChoiceArray.sort(sortNumber); 
 
-            console.log(userChoiceArray);
+            console.log(userChoiceArray); 
 
-            // prevent user from multiple submissions
-            $(`#quiz`).find(`.takeToResultBtn`).removeAttr('href');
-            $(`#resultSection`).append(userResult);
-            // remove the warning if forms are submitted properly
-            $(this).find(`.alertUser`).remove();
+            // get the winning anime title from the array 
+            const winningTitle = userChoiceArray[0].valueName;
+            const winningScore = userChoiceArray[0].animeScore;
+            // const stringWinningTitle = winningTitle.toString();
+            // access the winning title 
+            const resultChoice = animeResult[winningTitle]; 
 
             // if all scores are equal to 1, insert a safePickAnime 
             if (userChoiceArray[0, 1, 2, 3, 4].animeScore == 1) {
-                prompt(safePickAnime.hai)
-            }
+                $(`.result`).html(safePickAnime.name);
+                $(`.result`).append(safePickAnime.synopsis);
+                $(`.result`).append(safePickAnime.image);
+                $(`.result`).append(safePickAnime.linkToWatch);
+            } 
+
+            // append the winnning result and dynamically add it to the DOM
+            $(`.result`).html(resultChoice.name);
+            $(`.result`).append(resultChoice.synopsis);
+            $(`.result`).append(resultChoice.image);
+            $(`.result`).append(resultChoice.linkToWatch);
+
+            // prevent user from multiple submissions
+            $(`#quiz`).find(`.takeToResultBtn`).removeAttr('data-href');
+            // remove the warning if forms are submitted properly
+            $(this).find(`.alertUser`).remove();
         } else {
             // if there is not enough input from the user
             $(this).append(userWarning);
         }
     })
 });
+
+// testing
+// const userResult = `<div class="userQuizResult">Looks like you got ${userResultName}!<p></div>`;
+
