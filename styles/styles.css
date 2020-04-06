@@ -458,23 +458,15 @@ main {
   font-size: 1.8rem;
 }
 
-.questionContainer {
+form {
   display: -ms-grid;
   display: grid;
-  -webkit-column-gap: 50px;
-          column-gap: 50px;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  justify-items: stretch;
   min-height: 85vh;
-}
-
-.secondQuestionContainer .questionImage,
-.fourthQuestionContainer .questionImage {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
 }
 
 .questionImage img {
@@ -482,8 +474,17 @@ main {
   display: block;
 }
 
+.questionImage {
+  max-width: 75%;
+}
+
 .nextQuestionBtn {
   border: none;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  value: "thank you!";
 }
 
 .resultButton .button {

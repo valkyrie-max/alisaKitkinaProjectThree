@@ -6,26 +6,26 @@
         }
 }
 
-.questionContainer {
+form {
     display: grid;
-    column-gap: 50px;
+    grid-template-columns: 50% 50%;
     align-items: center;
-    justify-items: stretch;
     min-height: 85vh;
 }
 
-.secondQuestionContainer .questionImage, 
-.fourthQuestionContainer .questionImage {
-        order: 2;
-    }
 
 .questionImage img {
     width: 100%;
     display: block;
 }
 
+.questionImage {
+    max-width: 75%;
+}
+
 .nextQuestionBtn {
     border: none;
+    cursor: pointer;
     // width: 25%;
     // display: inline-block;
     // text-align: center;
@@ -38,6 +38,11 @@
     //         font-size: 1rem;
     //     }
 }
+
+.btn:disabled {
+    value: "thank you!";
+}
+
 
 .resultButton .button {
     width: 100%;
@@ -52,7 +57,7 @@
     margin-top: 5px;
 }
 
-input[type="radio"]{
+input[type="radio"] {
     display: none;
 }
 
