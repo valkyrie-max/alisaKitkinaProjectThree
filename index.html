@@ -36,7 +36,7 @@
             <section class="animeInfo" id="animeInfo">
                 <h2>“Anime”?</h2>
                 <h3>What the heck is that?!</h3>
-                <p>Glad you asked! According to <a href="https://en.wikipedia.org/wiki/Anime">the website that shall remain unnamed</a>, anime is animation originating from or associated with Japan. There are heated debates about whether anime is for kids or not. However, anime has a large age demographic that aims not only at children but adults as well. Therefore, on one hand, it can allow itself to discover dark topics such as death, war, bullying, jealousy and etc. on a deeper level. On the other hand, anime also can be used as a colorful visual medium, since there are shows that have children as their main intended audience. Hence, it can be used to teach kids to understand different types of people or the importance of hard work and dedication.</p>
+                <p>Glad you asked! According to <a href="https://en.wikipedia.org/wiki/Anime">the Wiki</a>, anime is animation originating from or associated with Japan. There are heated debates about whether anime is for kids or not. However, anime has a large age demographic that aims not only at children but adults as well. Therefore, on one hand, it can allow itself to discover dark topics such as death, war, bullying, jealousy and etc. on a deeper level. On the other hand, anime also can be used as a colorful visual medium, since there are shows that have children as their main intended audience. Hence, it can be used to teach kids to understand different types of people or the importance of hard work and dedication.</p>
                 <p>Nonetheless, anime remains very entertaining for many reasons that vary from person to person. To some it's the symbolism and hidden meanings. To others it's the comedic aspect of the show. Meanwhile, there are people (like the creator of this quiz!) that enjoy the visuals, music, and action provided by a number of shows.</p>
                 <button type="submit" class="takeQuiz">Fine... Lemme take the quiz, I guess.</button>
             </section>
@@ -48,9 +48,9 @@
             <div class="wrapper">
                 <div class="quizContainer">
                     <!-- first question -->
-                    <form class="question" id="question1" action="">
+                    <form class="question" data-scroll="1" id="question1" action="">
                         <div class="questionImage">
-                            <img src="https://picsum.photos/400" alt="">
+                            <img src="https://picsum.photos/800" alt="">
                         </div>
                         <div class="questionBox">
                             <div class="questionContainer">
@@ -78,16 +78,18 @@
                                         <label for="mha">Friendship Bond</label>
                                     </div>
                                 </div>
-                                <input id="questionInput" type="submit" value="Next Q!" class="btn nextQuestionBtn">
+                                <div class="submitOptionButton">
+                                    <input id="questionInput" type="submit" value="Submit!" data-scroll="#question2" class="btn nextQuestionBtn">
+                                </div>
                             </div>
-                            <div class="warning"></div>
                         </div>
+                        <div class="warning"></div>
                     </form>
 
                     <!-- second question -->
                     <form class="question" id="question2" action="">
                         <div class="questionImage">
-                            <img src="https://picsum.photos/400" alt="">
+                            <img src="https://picsum.photos/800" alt="">
                         </div>
                         <div class="questionBox">
                             <div class="questionContainer">
@@ -115,16 +117,18 @@
                                         <label for="jjba2">Weird times, weird people.</label>
                                     </div>
                                 </div>
-                                <input id="questionInput" type="submit" value="Next Q!" class="btn nextQuestionBtn">
+                                <div class="submitOptionButton">
+                                    <input id="questionInput" type="submit" value="Submit!" data-scroll="#question3"  class="btn nextQuestionBtn">
+                                </div>
                             </div>
-                            <div class="warning"></div>
                         </div>
+                        <div class="warning"></div>
                     </form>
 
                     <!-- third question -->
                     <form class="question" id="question3" action="">
                         <div class="questionImage">
-                            <img src="https://picsum.photos/400" alt="">
+                            <img src="https://picsum.photos/800" alt="">
                         </div>
                         <div class="questionBox">
                             <div class="questionContainer">
@@ -152,16 +156,18 @@
                                         <label for="gin3">Invaders</label>
                                     </div>
                                 </div>
-                                <input id="questionInput" type="submit" value="Next Q!" class="btn nextQuestionBtn">
+                                <div class="submitOptionButton">
+                                    <input id="questionInput" type="submit" value="Submit!" data-scroll="#question4"  class="btn nextQuestionBtn">
+                                </div>
                             </div>
-                            <div class="warning"></div>
                         </div>
+                        <div class="warning"></div>
                     </form>
 
                     <!-- fourth question -->
                     <form class="question" id="question4" action="">
                         <div class="questionImage">
-                            <img src="https://picsum.photos/400" alt="">
+                            <img src="https://picsum.photos/800" alt="">
                         </div>
                         <div class="questionBox">
                             <div class="questionContainer">
@@ -189,16 +195,18 @@
                                         <label for="aot4">What is the point if those with the means and power do not fight?</label>
                                     </div>
                                 </div>
-                                <input id="questionInput" type="submit" value="Next Q!" class="btn nextQuestionBtn">
+                                <div class="submitOptionButton">
+                                    <input id="questionInput" type="submit" value="Submit!" data-scroll="#question5" class="btn nextQuestionBtn">
+                                </div>
                             </div>
-                            <div class="warning"></div>
                         </div>
+                        <div class="warning"></div>
                     </form>
 
                     <!-- fifth question -->
                     <form class="question" id="question5" action="">
                         <div class="questionImage">
-                            <img src="https://picsum.photos/400" alt="">
+                            <img src="https://picsum.photos/800" alt="">
                         </div>
                         <div class="questionBox">
                             <div class="questionContainer">
@@ -226,15 +234,18 @@
                                         <label for="jjba5">Nothing really scares me. I think of fears as challenges I just need to overcome.</label>
                                     </div>
                                 </div>
-                                <input id="questionInput" type="submit" value="Next Q!" class="btn nextQuestionBtn">
+                                <div class="submitOptionButton">
+                                    <input id="questionInput" type="submit" data-scroll="#seeUserResults" value="Submit!" class="btn nextQuestionBtn">
+                                </div>
                             </div>
-                            <div class="warning"></div>
                         </div>
+                        <div class="warning"></div>
                     </form>
                 </div>
 
+                <!-- see results button -->
                 <div class="seeResultsContainer">
-                    <button data-href="#resultSection" id="seeUserResults" class="btn takeToResultBtn">See my results!</button>
+                    <button data-scroll="#resultContent" id="seeUserResults" class="btn takeToResultBtn">See my results!</button>
 
                     <div class="resultSectionWarning"></div>
                 </div>

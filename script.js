@@ -61,8 +61,12 @@ const taDaElement = `<h2><i aria-hidden="true" class="fas fa-star"></i>Ta~Da!<i 
 // user warning element
 const userWarning = `<div class="alertUser"><p>Pick an answer please!<p></div>`;
 
+// user last warning
+const lastWarning = `<div class="alertUser"><p>Please, finish answering the questions!<p></div>`;
+
 // refresh button element
 const retakeTheQuiz = `<button class="refreshPage">Retake the quiz!</button>`
+
 
 // JQuery doc ready
 $(function() {
@@ -75,16 +79,16 @@ $(function() {
     //smooth scroll upon clicking the "take this quiz to find out" button
     $(`a[href^='#']`).click(function (e) {
         e.preventDefault();
-        let position = $($(this).attr("href")).offset().top;
         $("body, html").animate({
-            scrollTop: position
+            scrollTop: $($(this).attr("href")).offset().top
         }, 1000);
     });
+
 
     // takeQuiz smooth scroll upon clicking the button
     $(`.takeQuiz`).on(`click`, function() { 
         $('html, body').animate({
-            scrollTop: $("#quiz").offset().top
+            scrollTop: $("#question1").offset().top
         }, 1500);
     });
 
@@ -94,6 +98,14 @@ $(function() {
             scrollTop: $(`#animeInfo`).offset().top
         }, 1000);
     });
+
+    // submit buttons smooth scroll
+    const smoothScroll = function (target) {
+        const $scrollElement = $(target);
+        $('html, body').animate({
+            scrollTop: $scrollElement.offset().top
+        }, 1200);
+    }
 
 
     // upon submitting the forms, do the following
@@ -111,21 +123,25 @@ $(function() {
 
             // prevent user from multiple submissions
             $(this).find(`input:submit`).prop(`disabled`, true);
+
             // once input is collected and form submitted, remove the warning
-            $(`.warning`).find(`.alertUser`).remove();
+            $(`.warning`).fadeOut();
+
+            // smooth scroll
+            const target = $(this).find(`input:submit`).data(`scroll`);
+            smoothScroll(target);
         } else {
             // if the input submitted is blank, dynamically warn the user
             $(this).find(`.warning`).html(userWarning);
+            $(`.warning`).hide();
+            $(`.warning`).fadeIn();
         }
     });
-
 
     // see user's result 
     $(`#seeUserResults`).on(`click`, function() {
         // re-declaring userChoice variable because of the scope
         const userChoice = $(`form`).find(`input:radio:checked`);
-        let userResultName = Object.keys(userChoice);
-
 
         // statement to calculate the result 
         if (userChoice.length === 5) {
@@ -146,10 +162,10 @@ $(function() {
 
             // get the winning anime title from the array 
             const winningTitle = userChoiceArray[0].valueName;
-            // const winningScore = userChoiceArray[0].animeScore;
+
             // access the winning title 
             const resultChoice = animeResult[winningTitle]; 
-
+            
             // append the winning result and dynamically add it to the DOM
             $(`.result`).html(`
                 <div class="additionalEffect"> 
@@ -187,13 +203,19 @@ $(function() {
                 location.reload(true);
             }); 
 
+            // smooth scroll
+            const target = $(`#resultSection`);
+            smoothScroll(target);
+
             // prevent user from multiple submissions
             $(`#quiz`).find(`.takeToResultBtn`).removeAttr('data-href');
             // remove the warning if forms are submitted properly
-            $(`.seeResultsContainer`).find(`.alertUser`).remove();
-        } else if (userChoice.length === 4 || userChoice.length === 3 || userChoice.length === 2 || userChoice.length === 1|| userChoice.length === 0) {
+            $(`.resultSectionWarning`).fadeOut();
+        } else if (userChoice.length <=4) {
             // if there is not enough input from the user
-            $(`.resultSectionWarning`).html(userWarning);
+            $(`.resultSectionWarning`).hide();
+            $(`.resultSectionWarning`).fadeIn();
+            $(`.resultSectionWarning`).html(lastWarning);
         }
     })
 });

@@ -1,60 +1,41 @@
+.quiz .wrapper {
+    position: relative;
+}
+
 .quiz {
     background-color: $tertiaryColor;
-    padding: 80px 0;
         h2 {
             font-size: 1.8rem;
         }
 }
 
 form {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    min-height: 85vh;
+    flex-wrap: wrap;
+    min-height: 90vh;
+        .questionImage, 
+        .questionBox {
+            flex: 1 0 400px;
+            padding-right: 50px;
+        }
 }
-
 
 .questionImage img {
     width: 100%;
     display: block;
+    border-radius: 15px;
 }
 
 .questionImage {
-    max-width: 75%;
-}
-
-.nextQuestionBtn {
-    border: none;
-    cursor: pointer;
-    // width: 25%;
-    // display: inline-block;
-    // text-align: center;
-    // color: $secondaryColor;
-    // font-size: 1rem;
-    // padding: 15px 10px;
-    // background-color: $headerColor;
-    //     i {
-    //         color: $secondaryTextColor;
-    //         font-size: 1rem;
-    //     }
-}
-
-.btn:disabled {
-    value: "thank you!";
-}
-
-
-.resultButton .button {
-    width: 100%;
-    margin: 20px 0;
-}
-
-.questionOptions {
-    margin-top: 20px;
+    max-width: 60%;
 }
 
 .optionContainer {
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 input[type="radio"] {
@@ -91,10 +72,43 @@ input[type="radio"]:checked + label {
     box-shadow: 5px 5px 0 $secondaryTextColor, 10px 10px 0 $secondaryColor;
 }
 
+.nextQuestionBtn,
 .takeToResultBtn {
-    color: black;
+    @include mainButton; 
 }
 
-.secondaryImageEffect {
-    display: none;
+.takeToResultBtn {
+    background-color: $secondaryTextColor;
+    color: $primaryTextColor;
+    font-size: 4rem;
+}
+
+.takeToResultBtn:hover {
+    font-size: 5rem;
+    color: $tertiaryColor;
+    background-color: $headerColor;
+}
+
+input[type=submit]:hover {
+    font-size: 1.8rem;
+}
+
+input[type=submit]:disabled {
+    color: $primaryTextColor;
+    font-size: 1.5rem;
+    background-color: $secondaryTextColor;
+    opacity: 50%;
+    cursor: auto;
+}
+
+.seeResultsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+}
+
+.warning,
+.resultSectionWarning {
+    @include warningStyle; 
 }
