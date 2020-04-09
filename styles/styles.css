@@ -513,6 +513,8 @@ form .questionBox {
   width: 100%;
   display: block;
   border-radius: 15px;
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
 }
 
 .questionImage {
@@ -576,18 +578,6 @@ input[type="radio"]:checked + label {
   transition: all 0.5s ease;
 }
 
-.takeToResultBtn {
-  background-color: #C3DFE0;
-  color: #424B54;
-  font-size: 4rem;
-}
-
-.takeToResultBtn:hover {
-  font-size: 5rem;
-  color: #F4CBC6;
-  background-color: #F7EDF0;
-}
-
 input[type=submit]:hover {
   font-size: 1.8rem;
 }
@@ -610,7 +600,42 @@ input[type=submit]:disabled {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 50vh;
+  min-height: 100vh;
+}
+
+.takeToResultBtn {
+  position: relative;
+  top: 0px;
+  border-radius: 15px;
+  background-color: #C3DFE0;
+  color: #424B54;
+  font-size: 4rem;
+  margin: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: 0px 7px 0 #F7EDF0;
+          box-shadow: 0px 7px 0 #F7EDF0;
+}
+
+.takeToResultBtn:hover {
+  font-size: 4.5rem;
+  color: #F4AFAB;
+  background-color: #F7EDF0;
+  -webkit-box-shadow: 0px 10px 0 #C3DFE0;
+          box-shadow: 0px 10px 0 #C3DFE0;
+}
+
+.takeToResultBtn:active {
+  top: 10px;
+  -webkit-box-shadow: 0px 5px 0 #C3DFE0;
+          box-shadow: 0px 5px 0 #C3DFE0;
+}
+
+.takeToResultBtn:disabled {
+  opacity: 50%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: auto;
 }
 
 .warning,
@@ -619,7 +644,7 @@ input[type=submit]:disabled {
   text-transform: uppercase;
   background-color: #F4AFAB;
   position: absolute;
-  bottom: 50px;
+  bottom: 5px;
   width: 100%;
   text-align: center;
   font-size: 2rem;

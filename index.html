@@ -50,7 +50,7 @@
                     <!-- first question -->
                     <form class="question" data-scroll="1" id="question1" action="">
                         <div class="questionImage">
-                            <img src="https://picsum.photos/800" alt="">
+                            <img src="assets/question1Img.png" alt="">
                         </div>
                         <div class="questionBox">
                             <div class="questionContainer">
@@ -89,7 +89,7 @@
                     <!-- second question -->
                     <form class="question" id="question2" action="">
                         <div class="questionImage">
-                            <img src="https://picsum.photos/800" alt="">
+                            <img src="assets/question2Img.png" alt="">
                         </div>
                         <div class="questionBox">
                             <div class="questionContainer">
@@ -128,7 +128,7 @@
                     <!-- third question -->
                     <form class="question" id="question3" action="">
                         <div class="questionImage">
-                            <img src="https://picsum.photos/800" alt="">
+                            <img src="assets/question3Img.png" alt="">
                         </div>
                         <div class="questionBox">
                             <div class="questionContainer">
@@ -167,7 +167,7 @@
                     <!-- fourth question -->
                     <form class="question" id="question4" action="">
                         <div class="questionImage">
-                            <img src="https://picsum.photos/800" alt="">
+                            <img src="assets/question4Img.png" alt="">
                         </div>
                         <div class="questionBox">
                             <div class="questionContainer">
@@ -206,7 +206,7 @@
                     <!-- fifth question -->
                     <form class="question" id="question5" action="">
                         <div class="questionImage">
-                            <img src="https://picsum.photos/800" alt="">
+                            <img src="assets/question5Img.png" alt="">
                         </div>
                         <div class="questionBox">
                             <div class="questionContainer">
@@ -245,7 +245,9 @@
 
                 <!-- see results button -->
                 <div class="seeResultsContainer">
-                    <button data-scroll="#resultContent" id="seeUserResults" class="btn takeToResultBtn">See my results!</button>
+                    <div class="seeResultsButton">
+                        <button data-scroll="#resultSection" id="seeUserResults" class="btn takeToResultBtn">See my results!</button>
+                    </div>
 
                     <div class="resultSectionWarning"></div>
                 </div>
@@ -256,9 +258,11 @@
         <!-- quiz ends -->
 
         <!-- result start -->
-        <section id="resultSection" class="result">
-            <!-- result will be dynamically added by using JQuery -->
-        </section>
+        <div class="wrapper">
+            <section id="resultSection" class="result">
+                <!-- result will be dynamically added by using JQuery -->
+            </section>
+        </div>
         <!-- result end -->
 
     </main>

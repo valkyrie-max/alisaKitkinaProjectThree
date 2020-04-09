@@ -28,6 +28,7 @@ form {
     width: 100%;
     display: block;
     border-radius: 15px;
+    filter: brightness(85%);
 }
 
 .questionImage {
@@ -77,18 +78,6 @@ input[type="radio"]:checked + label {
     @include mainButton; 
 }
 
-.takeToResultBtn {
-    background-color: $secondaryTextColor;
-    color: $primaryTextColor;
-    font-size: 4rem;
-}
-
-.takeToResultBtn:hover {
-    font-size: 5rem;
-    color: $tertiaryColor;
-    background-color: $headerColor;
-}
-
 input[type=submit]:hover {
     font-size: 1.8rem;
 }
@@ -105,7 +94,37 @@ input[type=submit]:disabled {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 50vh;
+    min-height: 100vh;
+}
+
+.takeToResultBtn {
+    position: relative;
+    top: 0px;
+    border-radius: 15px;
+    background-color: $secondaryTextColor;
+    color: $primaryTextColor;
+    font-size: 4rem;
+    margin: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0px 7px 0 $headerColor;
+}
+
+.takeToResultBtn:hover {
+    font-size: 4.5rem;
+    color: $secondaryColor;
+    background-color: $headerColor;
+    box-shadow: 0px 10px 0 $secondaryTextColor;
+}
+
+.takeToResultBtn:active {
+    top: 10px;
+    box-shadow: 0px 5px 0 $secondaryTextColor;
+}
+
+.takeToResultBtn:disabled {
+    opacity: 50%;
+    box-shadow: none;
+    cursor: auto;
 }
 
 .warning,

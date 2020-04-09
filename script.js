@@ -67,6 +67,9 @@ const lastWarning = `<div class="alertUser"><p>Please, finish answering the ques
 // refresh button element
 const retakeTheQuiz = `<button class="refreshPage">Retake the quiz!</button>`
 
+// copyright stuff
+const notMineArt = `<p>Please keep in mind that I DO NOT CLAIM ANY ARTWORK USED IN THE PROJECT! All of the pictures have been edited in PhotoShop but the original art goes to their respective owners! Please don't call FBI on me!</p>`
+
 
 // JQuery doc ready
 $(function() {
@@ -178,6 +181,7 @@ $(function() {
                     <p>${resultChoice.synopsis}</p>
                     <a>${resultChoice.linkToWatch}</a>
                     ${retakeTheQuiz}
+                    ${notMineArt}
                 </div>
             `);
 
@@ -194,6 +198,7 @@ $(function() {
                     <p>${safePickAnime.synopsis}</p>
                     <a>${safePickAnime.linkToWatch}</a>
                     ${retakeTheQuiz}
+                    ${notMineArt}
                 </div>
             `);
             } 
@@ -208,7 +213,7 @@ $(function() {
             smoothScroll(target);
 
             // prevent user from multiple submissions
-            $(`#quiz`).find(`.takeToResultBtn`).removeAttr('data-href');
+            $("#seeUserResults").attr("disabled", true);
             // remove the warning if forms are submitted properly
             $(`.resultSectionWarning`).fadeOut();
         } else if (userChoice.length <=4) {
