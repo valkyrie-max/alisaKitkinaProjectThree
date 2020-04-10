@@ -54,7 +54,13 @@ form {
 }
 
 input[type="radio"] {
-    display: none;
+    visibility: visible !important;
+    opacity: 0 !important;
+}
+
+input[type="radio"]:focus + label {
+    padding: 10px;
+    border: 1px solid $primaryTextColor;
 }
 
 input[type="radio"] + label::before {
