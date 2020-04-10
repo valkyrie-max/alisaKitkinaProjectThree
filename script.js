@@ -190,7 +190,7 @@ $(function() {
                     </div>
                 </div>
             `);
-
+            
             // if all scores are equal to 1, insert a safePickAnime 
             if (userChoiceArray[0, 1, 2, 3, 4].animeScore == 1) {
                 $(`.resultWrapper`).html(`
