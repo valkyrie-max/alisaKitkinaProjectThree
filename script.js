@@ -56,7 +56,7 @@ const safePickAnime = {
 }
 
 // aesthetic element 
-const taDaElement = `<h2><i aria-hidden="true" class="fas fa-star"></i>Ta~Da!<i aria-hidden="true" class="fas fa-star"></i></h2>`;
+const taDaElement = `<i aria-hidden="true" class="fas fa-star"></i>`;
 
 // user warning element
 const userWarning = `<div class="alertUser"><p>Pick an answer please!<p></div>`;
@@ -107,7 +107,7 @@ $(function() {
         const $scrollElement = $(target);
         $('html, body').animate({
             scrollTop: $scrollElement.offset().top
-        }, 1200);
+        }, 1400);
     }
 
 
@@ -170,35 +170,47 @@ $(function() {
             const resultChoice = animeResult[winningTitle]; 
             
             // append the winning result and dynamically add it to the DOM
-            $(`.result`).html(`
-                <div class="additionalEffect"> 
-                    <h2>${taDaElement}</h2>
-                </div>
-                <div class="resultContent">
-                    <h2> You should watch <span class= "highlightText"> ${resultChoice.name}</span> !</h2>
-                    ${resultChoice.image} 
-                    ${resultChoice.secondaryImage}
-                    <p>${resultChoice.synopsis}</p>
-                    <a>${resultChoice.linkToWatch}</a>
-                    ${retakeTheQuiz}
-                    ${notMineArt}
+            $(`.resultWrapper`).html(`
+                <div class="resultBox">
+                    <div class="additionalEffect">
+                        <h2>${taDaElement}Ta~Da!${taDaElement}</h2>
+                    </div>
+                    <div class="resultTitle"><h2> You should watch <span class= "highlightText"> ${resultChoice.name}</span>!</h2></div>
+                    <div class="resultContent">
+                        <div class="resultPicture">
+                            <div class="mainPicture">${resultChoice.image}</div> 
+                            <div class="secondPicture">${resultChoice.secondaryImage}</div>
+                        </div>
+                        <div class="resultText">
+                            <p>${resultChoice.synopsis}</p>
+                            <a>${resultChoice.linkToWatch}</a>
+                            ${retakeTheQuiz}
+                            ${notMineArt}
+                        </div>
+                    </div>
                 </div>
             `);
 
             // if all scores are equal to 1, insert a safePickAnime 
             if (userChoiceArray[0, 1, 2, 3, 4].animeScore == 1) {
-                $(`.result`).html(`
-                <div class="additionalEffect"> 
-                    <h2>${taDaElement}</h2>
-                </div>
-                <div class="resultContent">
-                    <h2> You should watch <span class= "highlightText"> ${safePickAnime.name}</span> !</h2>
-                    ${safePickAnime.image} 
-                    ${safePickAnime.secondaryImage}
-                    <p>${safePickAnime.synopsis}</p>
-                    <a>${safePickAnime.linkToWatch}</a>
-                    ${retakeTheQuiz}
-                    ${notMineArt}
+                $(`.resultWrapper`).html(`
+                <div class="resultBox">
+                    <div class="additionalEffect">
+                        <h2>${taDaElement}Ta~Da!${taDaElement}</h2>
+                    </div>
+                    <div class="resultTitle"><h2> You should watch <span class= "highlightText"> ${resultChoice.name}</span>!</h2></div>
+                    <div class="resultContent">
+                        <div class="resultPicture">
+                            <div class="mainPicture">${resultChoice.image}</div> 
+                            <div class="secondPicture">${resultChoice.secondaryImage}</div>
+                        </div>
+                        <div class="resultText">
+                            <p>${resultChoice.synopsis}</p>
+                            <a>${resultChoice.linkToWatch}</a>
+                            ${retakeTheQuiz}
+                            ${notMineArt}
+                        </div>
+                    </div>
                 </div>
             `);
             } 

@@ -16,7 +16,7 @@ form {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    min-height: 90vh;
+    min-height: 100vh;
         .questionImage, 
         .questionBox {
             flex: 1 0 400px;
@@ -127,7 +127,15 @@ input[type=submit]:disabled {
     cursor: auto;
 }
 
+.seeResultsButton .fa-star {
+    @include stars;
+}
+
 .warning,
 .resultSectionWarning {
     @include warningStyle; 
+}
+
+.resultSectionWarning {
+    bottom: 15px;
 }
