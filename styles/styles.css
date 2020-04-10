@@ -299,8 +299,7 @@ a {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-button,
-.button {
+button {
   cursor: pointer;
   color: #F7EDF0;
   font-weight: 600;
@@ -677,14 +676,14 @@ input[type=submit]:disabled {
 }
 
 .result h2 {
-  color: white;
+  color: #C3DFE0;
   font-size: 2.3rem;
 }
 
 .result p {
   letter-spacing: 0.7px;
   line-height: 30px;
-  color: white;
+  color: #C3DFE0;
 }
 
 .additionalEffect {
@@ -693,11 +692,10 @@ input[type=submit]:disabled {
 
 .additionalEffect h2 {
   font-size: 3.5rem;
-  width: auto;
-  display: inline-block;
+  margin-bottom: 25px;
 }
 
-.additionalEffect h2 .fa-star {
+.additionalEffect .fa-star {
   -webkit-transform: rotate(25deg);
           transform: rotate(25deg);
   -webkit-transition: all 0.5s ease-out;
@@ -715,7 +713,7 @@ input[type=submit]:disabled {
 }
 
 .resultBox {
-  padding: 100px 0;
+  padding: 50px 0;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -724,6 +722,86 @@ input[type=submit]:disabled {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.resultTitle h2 {
+  margin-bottom: 25px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.resultTitle h2 .highlightText {
+  font-family: 'Playfair Display', serif;
+  color: #F4CBC6;
+}
+
+.resultContent {
+  text-align: center;
+}
+
+.resultText p {
+  margin-top: 25px;
+}
+
+.resultText a {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #F4CBC6;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  font-size: 1.2rem;
+}
+
+.resultText .refreshPage {
+  position: relative;
+  top: 0px;
+  margin: 15px 0px;
+  font-size: 1.2rem;
+  font-family: 'Playfair Display', serif;
+  padding: 15px 10px;
+  background-color: #F4CBC6;
+  color: #424B54;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  -webkit-box-shadow: 0px 6px 0 #F4AFAB;
+          box-shadow: 0px 6px 0 #F4AFAB;
+}
+
+.resultText .notMineArt {
+  font-size: 0.8rem;
+  color: #F7EDF0;
+  line-height: 20px;
+}
+
+.resultText a:hover {
+  color: #FFD700;
+  font-size: 1.5rem;
+}
+
+.refreshPage:hover {
+  font-size: 1.4rem;
+}
+
+.refreshPage:active {
+  top: 10px;
+  -webkit-box-shadow: 0px 4px 0 #F4AFAB;
+          box-shadow: 0px 4px 0 #F4AFAB;
+}
+
+.resultButtons {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .result img {

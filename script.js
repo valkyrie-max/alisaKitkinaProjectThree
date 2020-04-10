@@ -11,7 +11,7 @@ let animeResultValues = {
 const animeResult = {
     jjba: {
         name: `JoJo's Bizarre Adventure`,
-        synopsis: `JoJo's Bizarre Adventure is the story about the Joestar family and its multi-generational conflict with Dio Brando. Each part in the anime follows the life of another member of the Joestar family, tracing their adventures through the generations. It starts with Jonathan Joestar who initiates a rivalry with his adopted brother, Dio Brando. Where will this bizarre adventure take them?`,
+        synopsis: `JoJo's Bizarre Adventure is a story about the Joestar family and its multi-generational conflict with Dio Brando. Each part in the anime follows the life of another member of the Joestar family, tracing their adventures through the generations. It starts with Jonathan Joestar who initiates a rivalry with his adopted brother, Dio Brando. Further, the plot of each season mainly consists of this current generation Jojo gathering allies, acquiring some kind of supernatural power, fighting enemies on their way, and finally facing the most powerful evil baddie in the whole season. But the main question remains: where will this bizarre adventure take the Joestar family?`,
         image: `<img src="assets/jjbaInitialImg.png" alt="" />`,
         secondaryImage: `<img class="secondaryImageEffect" src="assets/jjbaSecondaryImg.png" alt="" />`,
         linkToWatch: `<a class="watchHereLink" href="https://www.crunchyroll.com/jojos-bizarre-adventure">Watch it here!</a>`
@@ -68,7 +68,7 @@ const lastWarning = `<div class="alertUser"><p>Please, finish answering the ques
 const retakeTheQuiz = `<button class="refreshPage">Retake the quiz!</button>`
 
 // copyright stuff
-const notMineArt = `<p>Please keep in mind that I DO NOT CLAIM ANY ARTWORK USED IN THE PROJECT! All of the pictures have been edited in PhotoShop but the original art goes to their respective owners! Please don't call FBI on me!</p>`
+const notMineArt = `<p class="notMineArt">Please keep in mind that I DO NOT CLAIM ANY ARTWORK USED IN THE PROJECT! All of the pictures have been edited in Photoshop but the original art goes to their respective owners! Please don't call FBI on me!</p>`
 
 
 // JQuery doc ready
@@ -183,14 +183,16 @@ $(function() {
                         </div>
                         <div class="resultText">
                             <p>${resultChoice.synopsis}</p>
-                            <a>${resultChoice.linkToWatch}</a>
-                            ${retakeTheQuiz}
+                            <div class="resultButtons">
+                                ${resultChoice.linkToWatch}
+                                ${retakeTheQuiz}
+                            </div>
                             ${notMineArt}
                         </div>
                     </div>
                 </div>
             `);
-            
+
             // if all scores are equal to 1, insert a safePickAnime 
             if (userChoiceArray[0, 1, 2, 3, 4].animeScore == 1) {
                 $(`.resultWrapper`).html(`
@@ -206,8 +208,10 @@ $(function() {
                         </div>
                         <div class="resultText">
                             <p>${resultChoice.synopsis}</p>
-                            <a>${resultChoice.linkToWatch}</a>
-                            ${retakeTheQuiz}
+                            <div class="resultButtons">
+                                ${resultChoice.linkToWatch}
+                                ${retakeTheQuiz}
+                            </div>
                             ${notMineArt}
                         </div>
                     </div>
