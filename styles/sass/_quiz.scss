@@ -3,9 +3,12 @@
 }
 
 .quiz {
-    background-color: $tertiaryColor;
+    background-color: darken($tertiaryColor, 1.5);
         h2 {
             font-size: 1.8rem;
+        }
+        h3 {
+            font-weight: 600;
         }
 }
 
@@ -28,12 +31,23 @@ form {
     width: 100%;
     display: block;
     border-radius: 15px;
-    filter: brightness(85%);
+    transition: 0.5s all ease;
 }
 
 .questionImage {
     max-width: 60%;
+    filter: brightness(90%);
+    transition: 0.5s all ease;
 }
+
+.questionImage:hover {
+    filter: brightness(105%);
+}
+
+.questionImage img:hover {
+    box-shadow: 5px 6px 0 $secondaryTextColor, 10px 12px 0 $secondaryColor;
+}
+
 
 .optionContainer {
     margin-top: 10px;
@@ -50,14 +64,14 @@ input[type="radio"] + label::before {
     font-size: 1rem;
     margin-right: 10px;
     content: "\f0c8";
-    color: $headerColor;
+    color: $labelColor;
     transition: all 0.5s ease;
 }
 
 
 input[type="radio"]:hover + label::before,
 label:hover {
-    color: lighten($primaryTextColor, 20);
+    color: lighten($primaryTextColor, 10);
 }
 
 input[type="radio"]:checked + label::before,
@@ -71,6 +85,7 @@ input[type="radio"]:checked + label {
     color: $primaryTextColor;
     padding: 5px 3px;
     box-shadow: 5px 5px 0 $secondaryTextColor, 10px 10px 0 $secondaryColor;
+    font-size: 0.9rem;
 }
 
 .nextQuestionBtn,

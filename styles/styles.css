@@ -287,7 +287,7 @@ label {
   font-size: 0.8rem;
   letter-spacing: 0.7px;
   line-height: 30px;
-  color: #F7EDF0;
+  color: #f8f7f7;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
 }
@@ -478,11 +478,15 @@ main {
 }
 
 .quiz {
-  background-color: #F4CBC6;
+  background-color: #f3c5c0;
 }
 
 .quiz h2 {
   font-size: 1.8rem;
+}
+
+.quiz h3 {
+  font-weight: 600;
 }
 
 form {
@@ -517,12 +521,26 @@ form .questionBox {
   width: 100%;
   display: block;
   border-radius: 15px;
-  -webkit-filter: brightness(85%);
-          filter: brightness(85%);
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
 }
 
 .questionImage {
   max-width: 60%;
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+.questionImage:hover {
+  -webkit-filter: brightness(105%);
+          filter: brightness(105%);
+}
+
+.questionImage img:hover {
+  -webkit-box-shadow: 5px 6px 0 #C3DFE0, 10px 12px 0 #F4AFAB;
+          box-shadow: 5px 6px 0 #C3DFE0, 10px 12px 0 #F4AFAB;
 }
 
 .optionContainer {
@@ -540,14 +558,14 @@ input[type="radio"] + label::before {
   font-size: 1rem;
   margin-right: 10px;
   content: "\f0c8";
-  color: #F7EDF0;
+  color: #f8f7f7;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
 input[type="radio"]:hover + label::before,
 label:hover {
-  color: #6f7e8d;
+  color: #586571;
 }
 
 input[type="radio"]:checked + label::before,
@@ -562,6 +580,7 @@ input[type="radio"]:checked + label {
   padding: 5px 3px;
   -webkit-box-shadow: 5px 5px 0 #C3DFE0, 10px 10px 0 #F4AFAB;
           box-shadow: 5px 5px 0 #C3DFE0, 10px 10px 0 #F4AFAB;
+  font-size: 0.9rem;
 }
 
 .nextQuestionBtn,
