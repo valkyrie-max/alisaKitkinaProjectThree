@@ -550,6 +550,7 @@ form .questionBox {
 input[type="radio"] {
   visibility: visible !important;
   opacity: 0 !important;
+  margin-left: -15px;
 }
 
 input[type="radio"]:focus + label {
