@@ -222,6 +222,7 @@ $(function() {
             // refresh button functionality
             $(`.refreshPage`).on(`click`, function () {
                 location.reload(true);
+                $(`html, body`).scrollTop(0);
             }); 
 
             // smooth scroll

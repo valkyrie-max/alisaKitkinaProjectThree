@@ -829,8 +829,6 @@ input[type=submit]:disabled {
   width: 100%;
   display: block;
   border-radius: 12px;
-  -webkit-box-shadow: 0px 5px 0 #F4AFAB, 0px 10px 0 #C3DFE0;
-          box-shadow: 0px 5px 0 #F4AFAB, 0px 10px 0 #C3DFE0;
 }
 
 .resultPicture {
@@ -855,8 +853,10 @@ input[type=submit]:disabled {
 
 .resultPicture:hover .mainPicture img {
   opacity: 100;
-  -webkit-filter: blur(0.8px) brightness(105%);
-          filter: blur(0.8px) brightness(105%);
+  -webkit-filter: brightness(105%);
+          filter: brightness(105%);
+  -webkit-box-shadow: 0px 5px 0 #F4AFAB, 0px 10px 0 #C3DFE0;
+          box-shadow: 0px 5px 0 #F4AFAB, 0px 10px 0 #C3DFE0;
 }
 
 .resultPicture:hover .secondPicture {

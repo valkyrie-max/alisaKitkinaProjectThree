@@ -107,7 +107,6 @@
     width: 100%;
     display: block;
     border-radius: 12px;
-    box-shadow: 0px 5px 0 $secondaryColor, 0px 10px 0 $secondaryTextColor;
 }
 
 .resultPicture {
@@ -131,7 +130,8 @@
 .resultPicture:hover {
     .mainPicture img {
         opacity: 100;
-        filter: blur(0.8px) brightness(105%);
+        filter: brightness(105%);
+        box-shadow: 0px 5px 0 $secondaryColor, 0px 10px 0 $secondaryTextColor;
     }   
     .secondPicture {
         opacity: 0;
