@@ -12,36 +12,36 @@ const animeResult = {
     jjba: {
         name: `JoJo's Bizarre Adventure`,
         synopsis: `JoJo's Bizarre Adventure is a story about the Joestar family and its multi-generational conflict with Dio Brando. Each part in the anime follows the life of another member of the Joestar family, tracing their adventures through the generations. It starts with Jonathan Joestar who initiates a rivalry with his adopted brother, Dio Brando. Further, the plot of each season mainly consists of this current generation Jojo gathering allies, acquiring some kind of supernatural power, fighting enemies on their way, and finally facing the most powerful evil baddie in the whole season. But the main question remains: where will this bizarre adventure take the Joestar family?`,
-        image: `<img src="assets/jjbaInitialImg.png" alt="" />`,
-        secondaryImage: `<img class="secondaryImageEffect" src="assets/jjbaSecondaryImg.png" alt="" />`,
+        image: `<img src="assets/jjbaInitialImg.png" alt="A poster of the Jojo's Bizarre Adventure anime with the first three generations of main characters" />`,
+        secondaryImage: `<img class="secondaryImageEffect" src="assets/jjbaSecondaryImg.png" alt="A poster of the Jojo's Bizarre Adventure anime with the first three generations of main characters" />`,
         linkToWatch: `<a class="watchHereLink" href="https://www.crunchyroll.com/jojos-bizarre-adventure">Watch it here!</a>`
     },
     aot: {
         name: `Attack on Titan`,
         synopsis: `Attack on Titan is set in a dark-fantasy world where the humanity lives inside enormous Walls, which separate the area onto three main regions. Those Walls protect humans from Titans, gigantic humanoid creatures who devour humans presumably without any justifications. Main characters, Eren Jaeger, Mikasa Ackerman and Armin Arlert, witness something horrific at a young age and promise to take their revenge on those gigantic creatures.`,
-        image: `<img src="assets/aotInitialImg.png" alt="" />`,
-        secondaryImage: `<img class="secondaryImageEffect" src="assets/aotSecondaryImg.png" alt="" />`,
+        image: `<img src="assets/aotInitialImg.png" alt="A postser of the Attack On Titan anime with three main characters of the series" />`,
+        secondaryImage: `<img class="secondaryImageEffect" src="assets/aotSecondaryImg.png" alt="A poster of the Attack On Titan anime with three main characters of the series" />`,
         linkToWatch: `<a class="watchHereLink" href="https://www.crunchyroll.com/attack-on-titan">Watch it here!</a>`
     },
     mha: {
         name: `My Hero Academia`,
         synopsis: `Human kind develop special powers known as "quirks". In a present world occupied by people with quirks, Izuku Midoriya, who absolutely adores superhumans, happend to have no such power. Nontheless, the little boy is determined to become a hero and enroll in one of the most prestigious hero academy. After, one might say, lucky incident, Izuku get accepted into the academy where he starts to realize what it means to be a hero.`,
-        image: `<img src="assets/mhaInitialImg.png" alt="" />`,
-        secondaryImage: `<img class="secondaryImageEffect" src="assets/mhaSecondaryImg.png" alt="" />`,
+        image: `<img src="assets/mhaInitialImg.png" alt="A poster of the My Hero Academia anime with multiple characters from the series" />`,
+        secondaryImage: `<img class="secondaryImageEffect" src="assets/mhaSecondaryImg.png" alt="A poster of the My Hero Academia anime with multiple characters from the series" />`,
         linkToWatch: `<a class="watchHereLink" href="https://www.crunchyroll.com/my-hero-academia">Watch it here!</a>`
     },
     gin: {
         name: `Gintama`,
         synopsis: `It's mid-nineteenth century and the US fleet should have invaded Japan leading to modernization of the sociopolitical systems and the fall of Shogunate... but that didn't happened. Instead, Japan was invaded by aliens coming down from different parts of universe! The Shogunate became a puppet in the hands of invaders' army, which lead to all samurais being disarmed and reduced to temp workers. Gintama tells us a story about Gintoki, one of the samurais, without any respect for new rules, and he is ready to take any job to survive in these difficult times.`,
-        image: `<img src="assets/ginInitialImg.png" alt="" />`,
-        secondaryImage: `<img class="secondaryImageEffect" src="assets/ginSecondaryImg.png" alt="" />`,
+        image: `<img src="assets/ginInitialImg.png" alt="A poster of the Gintama anime with multiple characters from the series" />`,
+        secondaryImage: `<img class="secondaryImageEffect" src="assets/ginSecondaryImg.png" alt="A poster of the Gintama anime with multiple characters from the series" />`,
         linkToWatch: `<a class="watchHereLink" href="https://www.crunchyroll.com/gintama">Watch it here!</a>`
     },
     eva: {
         name: `Neon Genesis Evangelion`,
         synopsis: `Earth, 2015, human civilization is devastated by global climate disaster known as Second Impact, which happened fifteen years ago. To general public, it is presented as melting Antarctic ice, when in reality, it is a coverup for giant monsters attacking earth. Those monsters are able to nullify any conventional weapon created by humans with Force Fields. However, the hope isn't lost yet. Some children born after the Second Impact can pilot giant robots that are able to break those Force Fields and kill the invading monsters. But why these giant robots are able to break Force Fields while other weapons can't? And why are those monsters attacking in the first place?`,
-        image: `<img src="assets/evaInitialImg.png" alt="" />`,
-        secondaryImage: `<img class="secondaryImageEffect" src="assets/evaSecondaryImg.png" alt="" />`,
+        image: `<img src="assets/evaInitialImg.png" alt="A poster of the Neon Genesis Evangelion anime with multiple characters from the series" />`,
+        secondaryImage: `<img class="secondaryImageEffect" src="assets/evaSecondaryImg.png" alt="A poster of the Neon Genesis Evangelion anime with multiple characters from the series" />`,
         linkToWatch: `<a class="watchHereLink" href="https://www.netflix.com/ca/title/81033445">Watch it here!</a>`
     },
 }
@@ -50,8 +50,8 @@ const animeResult = {
 const safePickAnime = {
     name: `Haikyu!!`,
     synopsis: `Inspired after watching a volleyball ace nicknamed "Little Giant", small Shouyou Hinata relaunches the volleyball club at his middle school. His new team even makes it to a tournament! Unfortunately for them, their first match turns out to be their last when they are viciously crushed by one of the strongest teams. No, not even a team – they get destroyed by the "King of the Court," Tobio Kageyama. Hinata promises to surpass the King no matter what. After middle school is over, Hinata joins Karasuno High School's volleyball team, and he finds that his foe is now his teammate?! Haikyuu!! is a sports comedy with a slice of life that follows two  determined rivaling athletes, their teammates and opponents as Karasuno Volleyball Club tries to make their high school team the best in Japan.`,
-    image: `<img src="assets/haiInitialImg.png" alt="" />`,
-    secondaryImage: `<img class="secondaryImageEffect" src="assets/haiSecondaryImg.png" alt="" />`,
+    image: `<img src="assets/haiInitialImg.png" alt="A poster of the Haikyuu anime with multiple characters from the series" />`,
+    secondaryImage: `<img class="secondaryImageEffect" src="assets/haiSecondaryImg.png" alt="A poster of the Haikyuu anime with multiple characters from the series" />`,
     linkToWatch: `<a class="watchHereLink" href="https://www.crunchyroll.com/haikyu">Watch it here!</a>`
 }
 
