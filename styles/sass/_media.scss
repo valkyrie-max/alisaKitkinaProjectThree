@@ -1,5 +1,112 @@
-@media (max-width: 987px) {
-    .secondQuestionContainer .questionImage, .fourthQuestionContainer .questionImage {
-        order: 0;
+@media (max-width: 1230px) {
+    h1 span {
+        font-size: 6rem;
+    }
+
+
+    .questionMark {
+        font-size: 4.5rem;
+    }
+
+    .mainButtons {
+        .takeQuiz {
+            font-size: 1.8rem;
+        }
+
+        .takeToInfo {
+            font-size: 1.1rem;
+        }
+    }
+
+    .animeInfo {
+        h2 {
+            font-size: 4rem;
+        }
+
+        h3 {
+            font-size: 2.2rem;
+        }
+        p {
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+    }
+
+    form .questionBox {
+        padding-right: 0px;
+    }
+
+    .quiz h2 {
+        font-size: 1.5rem;
+    }
+
+    .quiz h3 {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+    }
+
+    label {
+        font-size: 0.75rem;
+    }
+
+    input[type="radio"]:checked + label {
+        font-size: 0.8rem;
+    }
+
+    .nextQuestionBtn,
+    .takeToResultBtn {
+        font-size: 1.2rem;
+    }
+
+    input[type=submit]:hover {
+        font-size: 1.5rem;
+    }
+
+    .takeToResultBtn {
+        font-size: 2.8rem;
+    }
+
+    .takeToResultBtn:hover {
+        font-size: 3.2rem;
+    }
+
+    .additionalEffect {
+        h2 {
+            font-size: 3rem;
+            text-align: center;
+        }
+        .fa-star {
+            font-size: 2.9rem;
+            margin: 10px;
+        }    
+    }
+
+    .resultTitle h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .resultText p {
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+    }
+
+    .resultButtons {
+        margin: 25px;
+    }
+
+    .warning,
+    .resultSectionWarning {
+        bottom: 50px;
+        text-align: center;
+        font-size: 1.5rem;
+        p {
+            padding: 10px 0;
+        }
+    }
+
+    .notMineArt {
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
     }
 }

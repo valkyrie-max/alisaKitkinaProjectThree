@@ -59,16 +59,16 @@ const safePickAnime = {
 const taDaElement = `<i aria-hidden="true" class="fas fa-star"></i>`;
 
 // user warning element
-const userWarning = `<div class="alertUser"><p>Pick an answer please!<p></div>`;
+const userWarning = `<div class="alertUser"><p>Pick an answer please!</p></div>`;
 
 // user last warning
-const lastWarning = `<div class="alertUser"><p>Please, finish answering the questions!<p></div>`;
+const lastWarning = `<div class="alertUser"><p>Please, finish answering the questions!</p></div>`;
 
 // refresh button element
 const retakeTheQuiz = `<button class="refreshPage">Retake the quiz!</button>`
 
 // copyright stuff
-const notMineArt = `<p class="notMineArt">Please keep in mind that I DO NOT CLAIM ANY ARTWORK USED IN THE PROJECT! All of the pictures have been edited in Photoshop but the original art goes to their respective owners! Please don't call FBI on me!</p>`
+const notMineArt = `<p class="notMineArt">Please keep in mind that <span>I do not claim any artwork used in the project!</span> All of the pictures have been edited in Photoshop but the original art belongs to their respective owners! Please don't call the FBI on me!</p>`
 
 
 // JQuery doc ready
