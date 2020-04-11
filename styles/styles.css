@@ -352,7 +352,7 @@ h1 span:hover {
 }
 
 .questionMark {
-  width: 20%;
+  display: inline-block;
   margin: 10px auto;
   font-size: 6rem;
   font-weight: 700;
@@ -510,10 +510,10 @@ form {
 }
 
 form .questionImage,
-form .questionBox {
+form .questionContainer {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 400px;
-          flex: 1 0 400px;
+      -ms-flex: 1 0 410px;
+          flex: 1 0 410px;
   padding-right: 50px;
 }
 
@@ -550,7 +550,7 @@ form .questionBox {
 input[type="radio"] {
   visibility: visible !important;
   opacity: 0 !important;
-  margin-left: -15px;
+  margin-left: -18px;
 }
 
 input[type="radio"]:focus + label {
@@ -584,14 +584,13 @@ input[type="radio"]:checked + label {
 input[type="radio"]:checked + label {
   background-color: #F7EDF0;
   color: #424B54;
-  padding: 5px 3px;
+  padding: 5px 1px;
   -webkit-box-shadow: 5px 5px 0 #C3DFE0, 10px 10px 0 #F4AFAB;
           box-shadow: 5px 5px 0 #C3DFE0, 10px 10px 0 #F4AFAB;
-  font-size: 10rem;
+  font-size: 0.82rem;
 }
 
 .submitOptionButton {
-  display: inline-block;
   margin-top: 25px;
 }
 
@@ -694,6 +693,11 @@ input[type=submit]:disabled {
   width: 100%;
   text-align: center;
   font-size: 2rem;
+}
+
+.warning p,
+.resultSectionWarning p {
+  padding: 10px 0;
 }
 
 .resultSectionWarning {
@@ -839,8 +843,6 @@ input[type=submit]:disabled {
 }
 
 .result img {
-  -webkit-filter: brightness(105%);
-          filter: brightness(105%);
   width: 100%;
   display: block;
   border-radius: 12px;
@@ -868,8 +870,6 @@ input[type=submit]:disabled {
 
 .resultPicture:hover .mainPicture img {
   opacity: 100;
-  -webkit-filter: brightness(105%);
-          filter: brightness(105%);
   -webkit-box-shadow: 0px 5px 0 #F4AFAB, 0px 10px 0 #C3DFE0;
           box-shadow: 0px 5px 0 #F4AFAB, 0px 10px 0 #C3DFE0;
 }
@@ -886,10 +886,10 @@ input[type=submit]:disabled {
     font-size: 4.5rem;
   }
   .mainButtons .takeQuiz {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .mainButtons .takeToInfo {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .animeInfo h2 {
     font-size: 4rem;
@@ -899,9 +899,13 @@ input[type=submit]:disabled {
   }
   .animeInfo p {
     font-size: 0.85rem;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
+    font-weight: 600;
   }
-  form .questionBox {
+  .animeInfo a {
+    text-decoration: underline;
+  }
+  form .questionContainer {
     padding-right: 0px;
   }
   .quiz h2 {
@@ -944,7 +948,8 @@ input[type=submit]:disabled {
   }
   .resultText p {
     font-size: 0.85rem;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.55px;
+    font-weight: 600;
   }
   .resultButtons {
     margin: 25px;
@@ -955,12 +960,168 @@ input[type=submit]:disabled {
     text-align: center;
     font-size: 1.5rem;
   }
-  .warning p,
-  .resultSectionWarning p {
-    padding: 10px 0;
-  }
   .notMineArt {
     font-size: 0.7rem;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .questionMark {
+    margin: 15px auto;
+  }
+  .mainButtons {
+    margin: 5px 0;
+  }
+  .mainButtons .takeQuiz {
+    font-size: 1.7rem;
+    width: 65%;
+  }
+  .mainButtons .takeToInfo {
+    font-size: 1.2rem;
+    width: 60%;
+  }
+  .animeInfo .takeQuiz {
+    font-size: 1.4rem;
+    width: 65%;
+  }
+  .animeInfo p {
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+  .animeInfo a {
+    text-decoration: none;
+  }
+  form {
+    padding: 50px 0px;
+  }
+  form .questionImage {
+    padding: 0;
+    padding: 35px;
+  }
+  .quiz h2 {
+    font-size: 2.5rem;
+  }
+  .quiz h3 {
+    font-size: 1.3rem;
+    margin-top: 20px;
+  }
+  .optionContainer {
+    margin-top: 25px;
+  }
+  label {
+    font-size: 1.1rem;
+  }
+  input[type="radio"]:checked + label {
+    font-size: 1.2rem;
+  }
+  .questionContainer {
+    text-align: center;
+  }
+  .nextQuestionBtn,
+  .takeToResultBtn {
+    font-size: 2rem;
+  }
+  input[type=submit] {
+    width: 40%;
+  }
+  input[type=submit]:hover {
+    font-size: 2.2rem;
+  }
+  .warning {
+    bottom: -20px;
+  }
+  .takeToResultBtn {
+    font-size: 2.4rem;
+  }
+  .takeToResultBtn:hover {
+    font-size: 2.7rem;
+  }
+  .resultText p {
+    font-weight: 400;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 881px) {
+  .questionImage {
+    max-width: 70%;
+  }
+  .takeToResultBtn {
+    font-size: 2rem;
+  }
+  .takeToResultBtn:hover {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 750px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+  .mainButtons {
+    margin: 5px 0;
+  }
+  .mainButtons .takeQuiz {
+    font-size: 1.3rem;
+    width: 65%;
+  }
+  .mainButtons .takeToInfo {
+    font-size: 0.9rem;
+    width: 60%;
+  }
+  .animeInfo p {
+    font-size: 0.95rem;
+  }
+  .animeInfo .takeQuiz {
+    font-size: 1.1rem;
+  }
+  .quiz h2 {
+    font-size: 2rem;
+  }
+  .quiz h3 {
+    font-size: 1.1rem;
+  }
+  form .questionImage {
+    padding: 20px;
+  }
+  .optionContainer {
+    margin-top: 16px;
+  }
+  label {
+    font-size: 1rem;
+  }
+  input[type="radio"]:checked + label {
+    font-size: 1rem;
+  }
+  input[type="submit"] {
+    width: auto;
+  }
+  .nextQuestionBtn, .takeToResultBtn {
+    font-size: 1.55rem;
+  }
+  input[type="submit"]:hover {
+    font-size: 2rem;
+  }
+  .resultText p {
+    font-size: 1rem;
+  }
+  .takeToResultBtn:hover {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 630px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  h1 span {
+    font-size: 5.5rem;
+  }
+  .questionMark {
+    font-size: 3.5rem;
+  }
+  .animeInfo h3 {
+    line-height: 50px;
   }
 }

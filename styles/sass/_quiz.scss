@@ -21,8 +21,8 @@ form {
     flex-wrap: wrap;
     min-height: 100vh;
         .questionImage, 
-        .questionBox {
-            flex: 1 0 400px;
+        .questionContainer {
+            flex: 1 0 410px;
             padding-right: 50px;
         }
 }
@@ -48,7 +48,6 @@ form {
     box-shadow: 5px 6px 0 $secondaryColor, 10px 12px 0 $secondaryTextColor;
 }
 
-
 .optionContainer {
     margin-top: 10px;
 }
@@ -56,7 +55,7 @@ form {
 input[type="radio"] {
     visibility: visible !important;
     opacity: 0 !important;
-    margin-left: -15px;
+    margin-left: -18px;
 }
 
 input[type="radio"]:focus + label {
@@ -90,13 +89,12 @@ input[type="radio"]:checked + label {
 input[type="radio"]:checked + label {
     background-color: $headerColor;
     color: $primaryTextColor;
-    padding: 5px 3px;
+    padding: 5px 1px;
     box-shadow: 5px 5px 0 $secondaryTextColor, 10px 10px 0 $secondaryColor;
-    font-size: 10rem;
+    font-size: 0.82rem;
 }
 
 .submitOptionButton {
-    display: inline-block;
     margin-top: 25px;
 }
 
@@ -160,6 +158,9 @@ input[type=submit]:disabled {
 .warning,
 .resultSectionWarning {
     @include warningStyle; 
+    p {
+        padding: 10px 0;
+    }
 }
 
 .resultSectionWarning {

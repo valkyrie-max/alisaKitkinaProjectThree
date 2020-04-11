@@ -3,18 +3,17 @@
         font-size: 6rem;
     }
 
-
     .questionMark {
         font-size: 4.5rem;
     }
 
     .mainButtons {
         .takeQuiz {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
         }
 
         .takeToInfo {
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
     }
 
@@ -28,11 +27,16 @@
         }
         p {
             font-size: 0.85rem;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.4px;
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: underline;
         }
     }
 
-    form .questionBox {
+    form .questionContainer {
         padding-right: 0px;
     }
 
@@ -88,7 +92,8 @@
 
     .resultText p {
         font-size: 0.85rem;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.55px;
+        font-weight: 600;
     }
 
     .resultButtons {
@@ -100,13 +105,209 @@
         bottom: 50px;
         text-align: center;
         font-size: 1.5rem;
-        p {
-            padding: 10px 0;
-        }
     }
 
     .notMineArt {
         font-size: 0.7rem;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.4px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .questionMark {
+        margin: 15px auto;
+    }
+    .mainButtons {
+        margin: 5px 0;
+            .takeQuiz {
+                font-size: 1.7rem;
+                width: 65%;
+            }
+
+            .takeToInfo {
+                font-size: 1.2rem;
+                width: 60%;
+            }
+    }
+
+    .animeInfo .takeQuiz {
+        font-size: 1.4rem;
+        width: 65%;
+    }
+
+    .animeInfo {
+        p {
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    form {
+        padding: 50px 0px;
+        .questionImage {
+            padding: 0;
+            padding: 35px;
+        }
+    }
+
+    .quiz h2 {
+        font-size: 2.5rem;
+    }
+
+    .quiz h3 {
+        font-size: 1.3rem;
+        margin-top: 20px;
+    }
+
+    .optionContainer {
+        margin-top: 25px;
+    }
+
+    label {
+        font-size: 1.1rem;
+    }
+
+    input[type="radio"]:checked + label {
+        font-size: 1.2rem;
+    }
+
+    .questionContainer {
+        text-align: center;
+    }
+
+    .nextQuestionBtn,
+    .takeToResultBtn {
+        font-size: 2rem;
+    }
+
+    input[type=submit] {
+        width: 40%;
+    }
+
+    input[type=submit]:hover {
+        font-size: 2.2rem;
+    }
+
+    .warning {
+        bottom: -20px;
+    }
+    
+    .takeToResultBtn {
+        font-size: 2.4rem;
+    }
+
+    .takeToResultBtn:hover {
+        font-size: 2.7rem;
+    }
+
+    .resultText p {
+        font-weight: 400;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 881px) {
+    .questionImage {
+        max-width: 70%;
+    }
+
+    .takeToResultBtn {
+        font-size: 2rem;
+    }
+
+    .takeToResultBtn:hover {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 750px) {
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    .mainButtons {
+        margin: 5px 0;
+            .takeQuiz {
+                font-size: 1.3rem;
+                width: 65%;
+            }
+
+            .takeToInfo {
+                font-size: 0.9rem;
+                width: 60%;
+            }
+    }
+
+    .animeInfo p {
+        font-size: 0.95rem;
+    }
+
+    .animeInfo .takeQuiz {
+        font-size: 1.1rem;
+    }
+
+    .quiz h2 {
+        font-size: 2rem;
+    }
+
+    .quiz h3 {
+        font-size: 1.1rem;
+    }
+
+    form .questionImage {
+        padding: 20px;
+    }
+
+    .optionContainer {
+        margin-top: 16px;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    input[type="radio"]:checked + label {
+        font-size: 1rem;
+    }
+
+    input[type="submit"] {
+        width: auto;
+    }
+
+    .nextQuestionBtn, .takeToResultBtn {
+        font-size: 1.55rem;
+    }
+
+    input[type="submit"]:hover {
+        font-size: 2rem;
+    }
+
+    .resultText p {
+        font-size: 1rem;
+    }
+
+    .takeToResultBtn:hover {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 630px) {
+    h1 {
+        font-size: 2.2rem;
+        span {
+            font-size: 5.5rem;
+        }
+    }
+
+    .questionMark {
+        font-size: 3.5rem;
+    }
+
+    .animeInfo h3 {
+        line-height: 50px;
     }
 }
