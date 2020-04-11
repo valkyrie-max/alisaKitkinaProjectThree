@@ -276,22 +276,15 @@
 
     input[type="submit"] {
         width: auto;
-    }
-
-    .nextQuestionBtn, .takeToResultBtn {
-        font-size: 1.55rem;
+        font-size: 1.25rem;
     }
 
     input[type="submit"]:hover {
-        font-size: 2rem;
+        font-size: 1.45rem;
     }
 
     .resultText p {
         font-size: 1rem;
-    }
-
-    .takeToResultBtn:hover {
-        font-size: 1.75rem;
     }
 }
 
@@ -309,5 +302,315 @@
 
     .animeInfo h3 {
         line-height: 50px;
+    }
+
+    .questionContainer {
+        text-align: left;
+    }
+
+    .nextQuestionBtn, .takeToResultBtn {
+        font-size: 1.35rem;
+    }
+
+    .takeToResultBtn:hover {
+        font-size: 1.55rem;
+    }
+
+    .seeResultsButton .fa-star{
+        margin: 5px 10px;
+    }
+
+    .resultContent {
+        text-align: left;
+    }
+}
+
+@media (max-width: 526px) {
+    h1 {
+        font-size: 2rem;
+        span {
+            font-size: 4rem;
+        }
+    }
+
+    .mainButtons {
+        margin: 25px 0;
+            .takeQuiz {
+                font-size: 1.2rem;
+                width: auto;
+            }
+            .takeToInfo {
+                font-size: 0.75rem;
+                width: auto;
+            }
+    }
+
+    form {
+        padding: 20px;
+        display: inline-block;
+    }
+
+    .animeInfo h2 {
+        font-size: 3.5rem;
+    }
+
+    .animeInfo h3 {
+        font-size: 1.8rem;
+    }
+
+    .animeInfo .takeQuiz {
+        width: auto;
+    }
+
+    .questionImage {
+        max-width: 100%;
+    }
+
+    .quiz h2 {
+        font-size: 1.8rem;
+    }
+
+    .quiz h3 {
+        font-size: 0.85rem;
+    }
+
+    .optionContainer {
+        margin-top: 8px;
+    }
+
+    label {
+        font-size: 0.65rem;
+    }
+
+    input[type="radio"] + label::before {
+        font-size: 0.65rem;
+    }
+
+    input[type="radio"]:checked + label {
+        font-size: 0.75rem;
+    }
+
+    .nextQuestionBtn, .takeToResultBtn {
+        font-size: 1rem;
+    }
+
+    .takeToResultBtn:hover {
+        font-size: 1.15rem;
+    }
+
+    .additionalEffect h2 {
+        font-size: 2.5rem;
+    }
+
+    .resultTitle h2 {
+        font-size: 1.8rem;
+    }
+
+    .resultText .notMineArt {
+        font-size: 0.65rem;
+    }
+
+    .warning {
+        font-size: 1.2rem;
+            p {
+                padding: 0;
+            }
+    }
+}
+
+@media (max-width: 465px) {
+    .animeInfo {
+        h3 {
+            font-size: 1.6rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+            line-height: 25px;
+        }
+    } 
+
+    .quiz {
+        h2 {
+            font-size: 1.6rem;
+        }  
+        h3 {
+            font-size: 0.75rem;
+            margin-top: 10px;
+        }
+    }
+
+    .questionImage {
+        max-width: 90%;
+    }
+
+    form {
+        padding: 50px 15px;
+        display: inline-block;
+    }
+
+    .submitOptionButton {
+        margin-top: 10px;
+    }
+
+    .nextQuestionBtn, .takeToResultBtn {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }   
+
+    input[type="submit"] {
+        font-size: 1rem;
+    }
+
+    input[type="submit"]:hover {
+        font-size: 1.2rem;
+    }
+
+    .takeToResultBtn {
+        font-size: 0.9rem;
+    }
+
+    .takeToResultBtn:hover {
+        font-size: 1.05rem;
+    }
+
+    .additionalEffect h2 {
+        font-size: 2rem;
+    }
+
+    .additionalEffect .fa-star {
+        font-size: 1.6rem;
+        margin: 5px;
+    }
+
+    .resultTitle h2 {
+        font-size: 1.3rem;
+    }
+
+    .resultText p {
+        font-size: 0.8rem;
+        line-height: 25px;
+    }
+
+    .warning {
+        font-size: 1.4rem;
+        width: auto;
+        bottom: -20px
+    }
+
+    .resultSectionWarning {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 370px) {
+    h1 {
+        font-size: 1.7rem;
+        span {
+            text-shadow: 4px 3px 0 #F4AFAB, 8px 6px 0 #F4CBC6;
+        }
+        span:hover {
+            text-shadow: -4px 3px 0 #F4AFAB, -8px 6px 0 #F4CBC6;
+        }
+    }
+
+    .animeInfo {
+        h2 {
+            font-size: 2.4rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            line-height: 30px;
+        }
+    }
+
+    .quiz h2 {
+        font-size: 1.4rem;
+    }
+
+    .quiz h3 {
+        font-size: 0.90rem;
+    }
+
+    form {
+        padding: 40px 15px;
+    }
+
+    form .questionImage {
+        max-width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+            img:hover {
+                box-shadow: 3px 4px 0 #F4AFAB, 6px 8px 0 #C3DFE0;
+            }
+    }
+
+    label {
+        font-size: 0.75rem;
+    }
+
+    input[type="radio"] + label::before {
+        font-size: 0.75rem;
+    }
+
+    input[type="radio"]:checked + label {
+        font-size: 0.85rem;
+    }
+
+    .seeResultsContainer {
+        min-height: 50vh;
+    }
+
+    .takeToResultBtn {
+        padding: 5px 0px;
+        font-size: 0.85rem;
+        box-shadow: 0px 4px 0 $headerColor;
+            .fa-star {
+                text-shadow: none;
+                margin: 0px 5px;
+            }
+    }
+
+    .takeToResultBtn:hover {
+        font-size: 1rem;
+        box-shadow: 0px 6px 0 $secondaryTextColor;
+    }
+
+    .takeToResultBtn:active {
+        top: 5px;
+        box-shadow: 0px 3px 0 $secondaryTextColor;
+    }
+
+    .warning {
+        font-size: 1rem;
+        width: auto;
+        bottom: 0px;
+    }
+
+    .resultSectionWarning {
+        font-size: 1.1rem;
+    }
+
+    .resultText .refreshPage {
+        font-size: 1rem;
+        padding: 10px 5px;
+    }
+    
+    .refreshPage:hover {
+        font-size: 1.1rem;
+    }
+
+    .refreshPage:active {
+        top: 5px;
+        box-shadow: 0px 2px 0 $secondaryColor;
+    }
+
+    .resultText a {
+        font-size: 1rem;
+    }
+
+    .resultText a:hover {
+        font-size: 1.2rem;
     }
 }
