@@ -200,16 +200,16 @@ $(function() {
                     <div class="additionalEffect">
                         <h2>${taDaElement}Ta~Da!${taDaElement}</h2>
                     </div>
-                    <div class="resultTitle"><h2> You should watch <span class= "highlightText"> ${resultChoice.name}</span>!</h2></div>
+                    <div class="resultTitle"><h2> You should watch <span class= "highlightText"> ${safePickAnime.name}</span>!</h2></div>
                     <div class="resultContent">
                         <div class="resultPicture">
-                            <div class="mainPicture">${resultChoice.image}</div> 
-                            <div class="secondPicture">${resultChoice.secondaryImage}</div>
+                            <div class="mainPicture">${safePickAnime.image}</div> 
+                            <div class="secondPicture">${safePickAnime.secondaryImage}</div>
                         </div>
                         <div class="resultText">
-                            <p>${resultChoice.synopsis}</p>
+                            <p>${safePickAnime.synopsis}</p>
                             <div class="resultButtons">
-                                ${resultChoice.linkToWatch}
+                                ${safePickAnime.linkToWatch}
                                 ${retakeTheQuiz}
                             </div>
                             ${notMineArt}
